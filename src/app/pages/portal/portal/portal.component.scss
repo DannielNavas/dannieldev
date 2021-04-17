@@ -1,0 +1,37 @@
+// imagen de usuario
+.imagen-user {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+}
+.imagen-user-position {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 150px;
+  flex-direction: column;
+  height: auto;
+  width: 1000px;
+}
+.imagen-user h1,h2 {
+  font-family: 'Gabriela', serif;
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
+}
+.container {
+  position: relative;
+  top: 500px;
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+}
+.row {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: red;
+  max-width: 1000px;
+}
