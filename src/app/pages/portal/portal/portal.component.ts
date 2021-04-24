@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portal.component.scss']
 })
 export class PortalComponent implements OnInit {
-
+  posts: number[] = [];
   constructor() { }
 
   ngOnInit(): void {
+    this.posts = [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+    ];
   }
 
 }

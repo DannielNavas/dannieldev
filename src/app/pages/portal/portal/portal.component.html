@@ -9,8 +9,52 @@
 
 <div class="container">
   <div class="row">
-    <div class="circle-images">
-      <p>Texto</p>
+    <div class="title">
+      <h2>Articulos</h2>
+      <button>Ver todos</button>
     </div>
+    <div class="line"></div>
+    <!-- inicial post -->
+    <div class="container-post">
+      <a href="http://" class="post" *ngFor="let post of posts" >
+        <div class="date">
+          07 Abril 2021
+        </div>
+        <div class="title-post">
+          <h3>Titulo de Ejemplo para los post.</h3>
+        </div>
+      </a>
+    </div>
+    <!-- final de post -->
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="title">
+      <h2>Proyectos</h2>
+      <button>Ver todos</button>
+    </div>
+    <div class="line"></div>
+     <!-- inicial post -->
+     <div class="container-post">
+      <a href="http://" class="post" *ngFor="let post of posts" >
+        <div class="date">
+          07 Abril 2021
+        </div>
+        <div class="title-post">
+          <h3>Titulo de Ejemplo para los post.</h3>
+        </div>
+      </a>
+    </div>
+    <!-- final de post -->
+  </div>
+</div>
+
+<footer>
+  <section>
+    <a href="">Instagram</a>
+    <a href="">Github</a>
+    <a href="">LinkedIn</a>
+  </section>
+</footer>
