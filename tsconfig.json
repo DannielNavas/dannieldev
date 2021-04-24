@@ -19,5 +19,10 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false
+  },
+  "paths": {
+    "@core/*": ["src/app/core"],
+    "@shared/*": ["src/app/shared"],
+    "@pages/*": ["src/app/pages"],
   }
 }
