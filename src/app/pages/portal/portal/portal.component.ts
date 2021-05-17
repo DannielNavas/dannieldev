@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { faAngular, faGithub, faMedium } from '@fortawesome/fontawesome-free-brands';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-portal',
@@ -7,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortalComponent implements OnInit {
   posts: number[] = [];
+  angular = faAngular;
+  github = faGithub;
   constructor() { }
 
   ngOnInit(): void {
