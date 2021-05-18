@@ -10,6 +10,12 @@
   display: flex;
   justify-content: center;
 }
+.soy {
+  line-height: 0.6;
+  letter-spacing: 0.207em !important;
+  font-style: normal;
+  font-weight: 900;
+}
 .imagen-user-position {
   position: absolute;
   display: flex;
@@ -26,6 +32,13 @@
 
 .left {
   width: 631px;
+}
+
+// Imagen de banner
+.banner {
+  width: 358px;
+  height: 358px;
+  border-radius: 50%;
 }
 
 // Nuevo portal
@@ -47,13 +60,14 @@
     margin-left: 86px;
     font-size: 68px;
     width: 496px;
+    font-size: 72px;
   }
 }
 
 .text-second {
   top: 463px;
   left: 135px;
-  width: 526px;
+  width: 620px;
   height: 58px;
   text-align: left;
   letter-spacing: 0px;
@@ -61,6 +75,15 @@
   margin-left: 105px;
   h3 {
     color: #3B3939;
+  }
+}
+
+.second-text {
+  font: normal normal normal 22px/33px Arial;
+  letter-spacing: 0px;
+  color: #3B3939;
+  b {
+    font: normal normal bold 22px/33px Arial;
   }
 }
 
@@ -98,7 +121,7 @@
     color: #707070;
   }
   button {
-    border: 1px solid #707070;
+    border: 2px solid #46eefa;
     background-color: transparent;
     color: #707070;
     font-size: 18px;
@@ -160,9 +183,9 @@
   }
 }
 
+// ================================================================= footer =================================================================//
+
 footer {
-  position: relative;
-  top: 500px;
   display: flex;
   height: 46px;
   width: 100%;
