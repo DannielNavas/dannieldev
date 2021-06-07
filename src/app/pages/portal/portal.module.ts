@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PortalRoutingModule } from './portal-routing.module';
 import { PortalComponent } from './portal/portal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     CommonModule,
     PortalRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule,
   ]
 })
 export class PortalModule { }
