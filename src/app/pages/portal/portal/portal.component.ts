@@ -11,8 +11,6 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 })
 export class PortalComponent implements OnInit {
   posts: number[] = [];
-  angular = faAngular;
-  github = faGithub;
   constructor() { }
 
   ngOnInit(): void {

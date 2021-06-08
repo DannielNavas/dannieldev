@@ -1,97 +1,97 @@
 // imagen de usuario
-.imagen-user {
-  top: 137px;
-  left: 0px;
-  width: 100%;
-  height: 421px;
-  background: #FFFF00 0% 0% no-repeat padding-box;
-  opacity: 1;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-}
-.soy {
-  line-height: 0.6;
-  letter-spacing: 0.207em !important;
-  font-style: normal;
-  font-weight: 900;
-}
-.imagen-user-position {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  // top: 50px;
-  flex-direction: row;
-  height: auto;
-  max-width: 1000px;
-  width: 100%;
-  height: 421px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+// .imagen-user {
+//   top: 137px;
+//   left: 0px;
+//   width: 100%;
+//   height: 421px;
+//   background: #FFFF00 0% 0% no-repeat padding-box;
+//   opacity: 1;
+//   position: absolute;
+//   display: flex;
+//   justify-content: center;
+// }
+// .soy {
+//   line-height: 0.6;
+//   letter-spacing: 0.207em !important;
+//   font-style: normal;
+//   font-weight: 900;
+// }
+// .imagen-user-position {
+//   position: absolute;
+//   display: flex;
+//   align-items: center;
+//   // top: 50px;
+//   flex-direction: row;
+//   height: auto;
+//   max-width: 1000px;
+//   width: 100%;
+//   height: 421px;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// }
 
-.left {
-  width: 631px;
-}
+// .left {
+//   width: 631px;
+// }
 
-// Imagen de banner
-.banner {
-  width: 358px;
-  height: 358px;
-  border-radius: 50%;
-}
+// // Imagen de banner
+// .banner {
+//   width: 358px;
+//   height: 358px;
+//   border-radius: 50%;
+// }
 
-// Nuevo portal
-.circulo-title {
-  top: 163px;
-  left: 84px;
-  width: 277px;
-  height: 270px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: 135px;
-  opacity: 1;
+// // Nuevo portal
+// .circulo-title {
+//   top: 163px;
+//   left: 84px;
+//   width: 277px;
+//   height: 270px;
+//   background: #FFFFFF 0% 0% no-repeat padding-box;
+//   border-radius: 135px;
+//   opacity: 1;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: flex-start;
 
-  h1 {
-    margin-left: 86px;
-    font-size: 68px;
-    width: 496px;
-    font-size: 72px;
-  }
-}
+//   h1 {
+//     margin-left: 86px;
+//     font-size: 68px;
+//     width: 496px;
+//     font-size: 72px;
+//   }
+// }
 
-.text-second {
-  top: 463px;
-  left: 135px;
-  width: 620px;
-  height: 58px;
-  text-align: left;
-  letter-spacing: 0px;
-  opacity: 1;
-  margin-left: 105px;
-  h3 {
-    color: #3B3939;
-  }
-}
+// .text-second {
+//   top: 463px;
+//   left: 135px;
+//   width: 620px;
+//   height: 58px;
+//   text-align: left;
+//   letter-spacing: 0px;
+//   opacity: 1;
+//   margin-left: 105px;
+//   h3 {
+//     color: #3B3939;
+//   }
+// }
 
-.second-text {
-  font: normal normal normal 22px/33px Arial;
-  letter-spacing: 0px;
-  color: #3B3939;
-  b {
-    font: normal normal bold 22px/33px Arial;
-  }
-}
+// .second-text {
+//   font: normal normal normal 22px/33px Arial;
+//   letter-spacing: 0px;
+//   color: #3B3939;
+//   b {
+//     font: normal normal bold 22px/33px Arial;
+//   }
+// }
 
-.imagen-user h1,h2 {
-  font-family: 'Gabriela', serif;
-  margin-top: 16px !important;
-  margin-bottom: 0 !important;
-}
+// .imagen-user h1,h2 {
+//   font-family: 'Gabriela', serif;
+//   margin-top: 16px !important;
+//   margin-bottom: 0 !important;
+// }
 .container {
   position: relative;
   top: 570px;
@@ -183,26 +183,10 @@
   }
 }
 
-// ================================================================= footer =================================================================//
 
 footer {
   display: flex;
   height: 46px;
   width: 100%;
   justify-content: center;
-  section {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    max-width: 1000px;
-    flex-wrap: wrap;
-  }
-  a {
-    margin-left: 8px;
-    color: #5D5DA8;
-    text-decoration: none;
-  }
-
 }
