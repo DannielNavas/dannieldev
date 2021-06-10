@@ -27,9 +27,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: npm ci
-    - run: npm run test:ci
-
+    - run: npm i
+    - run: ng test --no-watch --code-coverage
     # Coverage badges will be updated on any branch except protected
     # branches 'develop' and 'master' and on a pull requests
     - name: Test angular action
