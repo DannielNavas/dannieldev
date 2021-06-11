@@ -27,7 +27,7 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.logo').textContent).toContain('danniel.dev');
+    expect(compiled.querySelector('.logo').textContent).toContain(' D.D ');
   });
 
 });
