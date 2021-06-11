@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PortalComponent } from './portal.component';
@@ -8,9 +9,11 @@ describe('PortalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PortalComponent ]
-    })
-    .compileComponents();
+      declarations: [PortalComponent],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA // Tells Angular we will have custom tags in our templates
+      ]
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -22,12 +25,4 @@ describe('PortalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(PortalComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.imagen-user-position h1').textContent).toContain('Soy Daniel Navas');
-  });
-
 });
