@@ -1,0 +1,14 @@
+name: test-pull-request
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+
+      - name: Run Install
+        run: npm i
+
+      - name: Run Jasmine tests
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
