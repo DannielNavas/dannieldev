@@ -3,9 +3,26 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { of } from 'rxjs';
+import { PostService } from 'src/app/core/services/firebase/post.service';
 import { environment } from 'src/environments/environment';
 
 import { BlogResumenComponent } from './blog-resumen.component';
+
+class MockPostService {
+  getPost() {
+    return of([{
+      payload: {
+        doc: {
+          id: 'AIzaSyD',
+          data() {
+            return of({});
+          },
+        },
+      },
+    }]);
+  }
+}
 
 describe('BlogResumenComponent', () => {
   let component: BlogResumenComponent;
@@ -13,17 +30,17 @@ describe('BlogResumenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BlogResumenComponent ],
+      declarations: [BlogResumenComponent],
       schemas: [
-        CUSTOM_ELEMENTS_SCHEMA // Tells Angular we will have custom tags in our templates
+        CUSTOM_ELEMENTS_SCHEMA, // Tells Angular we will have custom tags in our templates
       ],
       imports: [
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule,
         AngularFireStorageModule,
-      ]
-    })
-    .compileComponents();
+      ],
+      providers: [{ provide: PostService, useClass: MockPostService }],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -33,6 +50,11 @@ describe('BlogResumenComponent', () => {
   });
 
   it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should go to post', () => {
+    component.goToPost('fakepost');
     expect(component).toBeTruthy();
   });
 });
