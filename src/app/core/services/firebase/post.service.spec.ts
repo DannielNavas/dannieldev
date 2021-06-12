@@ -23,4 +23,8 @@ describe('PostService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should be getPost', () => {
+    service.getPost();
+  });
 });

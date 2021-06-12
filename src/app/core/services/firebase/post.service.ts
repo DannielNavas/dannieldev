@@ -16,19 +16,19 @@ export class PostService {
     this.postCollections = this.database.collection<Posts>('posts');
   }
 
-  savePost(post: Posts): any {
-    return new Promise<any>((resolve, reject) => {
-      this.database
-        .collection('posts')
-        .add(post)
-        .then(
-          (response) => {
-            console.log(response);
-          },
-          (error) => reject(error)
-        );
-    });
-  }
+  // savePost(post: Posts): any {
+  //   return new Promise<any>((resolve, reject) => {
+  //     this.database
+  //       .collection('posts')
+  //       .add(post)
+  //       .then(
+  //         (response) => {
+  //           console.log(response);
+  //         },
+  //         (error) => reject(error)
+  //       );
+  //   });
+  // }
 
   // tslint:disable-next-line: typedef
   getPost() {

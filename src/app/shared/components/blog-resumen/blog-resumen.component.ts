@@ -13,6 +13,7 @@ export class BlogResumenComponent implements OnInit {
 
   ngOnInit(): void {
     this.postService.getPost().subscribe((data) => {
+      console.log(data);
       this.posts = data.map((e) => {
         return {
           id: e.payload.doc.id,
