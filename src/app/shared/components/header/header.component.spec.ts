@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
@@ -8,7 +9,10 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ HeaderComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA // Tells Angular we will have custom tags in our templates
+      ]
     })
     .compileComponents();
   });
@@ -27,7 +31,7 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.logo').textContent).toContain('danniel.dev');
+    expect(compiled.querySelector('.logo').textContent).toContain(' D.D ');
   });
 
 });
