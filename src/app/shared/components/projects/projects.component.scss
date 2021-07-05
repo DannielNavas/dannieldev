@@ -69,6 +69,12 @@ a {
     height: auto;
     width: 250px
   }
+  a {
+    color: #199EFF;
+    :active {
+      color: #FFF;
+    }
+  }
 }
 p {
   margin: 0;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faAngular, faGithub, faMedium } from '@fortawesome/fontawesome-free-brands';
+import { faAngular, faGithub, faInstagram, faLinkedin, faLinkedinIn, faMedium, faYoutube, faYoutubeSquare } from '@fortawesome/fontawesome-free-brands';
 
 @Component({
   selector: 'app-footer',
@@ -7,8 +7,9 @@ import { faAngular, faGithub, faMedium } from '@fortawesome/fontawesome-free-bra
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  angular = faAngular;
-  github = faGithub;
+  linkedin = faLinkedin;
+  instagram = faInstagram;
+  youtube = faYoutube;
   constructor() { }
 
   ngOnInit(): void {
