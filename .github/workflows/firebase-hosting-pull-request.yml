@@ -15,5 +15,13 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DANNIELDEV_82D64 }}'
           projectId: dannieldev-82d64
+      - name: Audit deploy preview
+        uses: jakejarvis/lighthouse-action@master
+        with:
+          netlify_site: 'https://danniel.dev'
+      - uses: actions/upload-artifact@master
+        with:
+          name: report
+          path: './report'
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
