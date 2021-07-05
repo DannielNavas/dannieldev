@@ -9,7 +9,16 @@ section {
   flex-wrap: wrap;
 }
 a {
-  margin-left: 8px;
+  margin-left: 16px;
   color: #5D5DA8;
   text-decoration: none;
+  .instagram {
+    color: #d6249f;
+  }
+  .linkedin {
+    color: #0e76a8;
+  }
+  .youtube {
+    color: #c4302b;
+  }
 }
