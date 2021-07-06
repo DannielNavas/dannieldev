@@ -11,16 +11,18 @@ import { BlogResumenComponent } from './blog-resumen.component';
 
 class MockPostService {
   getPost() {
-    return of([{
-      payload: {
-        doc: {
-          id: 'AIzaSyD',
-          data() {
-            return of({});
+    return of([
+      {
+        payload: {
+          doc: {
+            id: 'AIzaSyD',
+            data() {
+              return of({});
+            },
           },
         },
       },
-    }]);
+    ]);
   }
 }
 
