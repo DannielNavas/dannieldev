@@ -30,7 +30,7 @@ export class PostService {
   //   });
   // }
 
-  // tslint:disable-next-line: typedef
+  // eslint-disable-next-line
   getPost() {
     // TODO ajustar para mostrar los post
     return this.database.collection('posts').snapshotChanges();

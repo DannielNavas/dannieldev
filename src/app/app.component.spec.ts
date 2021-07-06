@@ -6,15 +6,11 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [AppComponent],
       schemas: [
-        CUSTOM_ELEMENTS_SCHEMA // Tells Angular we will have custom tags in our templates
-      ]
+        CUSTOM_ELEMENTS_SCHEMA, // Tells Angular we will have custom tags in our templates
+      ],
     }).compileComponents();
   });
 
@@ -29,5 +25,4 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('danniel.dev');
   });
-
 });
