@@ -6,7 +6,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: #FFFF00 0% 0% no-repeat padding-box;
+  background: #ffff00 0% 0% no-repeat padding-box;
 }
 .row {
   display: flex;
@@ -21,12 +21,12 @@
   width: auto;
 }
 .menu li {
-  display:inline-block;
+  display: inline-block;
   width: auto;
   margin-right: 101px;
-  text-align:center;
-  color:#fff;
-  font-family: 'Gabriela', serif;
+  text-align: center;
+  color: #fff;
+  font-family: "Gabriela", serif;
 }
 .menu li a {
   text-align: center;
@@ -36,8 +36,8 @@
   opacity: 1;
 }
 .active {
-  color: #199EFF !important;
-  font-family: 'Gabriela', serif !important;
+  color: #199eff !important;
+  font-family: "Gabriela", serif !important;
 }
 .logo {
   font-size: 16px;
@@ -45,7 +45,7 @@
   margin-left: 16px;
   display: inline-block;
   color: #000;
-  background: #FFF;
+  background: #fff;
   border: 2px solid #46eefa;
   padding: 16px 16px 16px 16px;
   border-radius: 0 50px 50px;
