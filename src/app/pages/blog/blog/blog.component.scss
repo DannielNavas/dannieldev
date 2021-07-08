@@ -14,3 +14,32 @@
   max-width: 1000px;
   flex-wrap: wrap;
 }
+.title {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  height: auto;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-between;
+  h2 {
+    color: #707070;
+  }
+  button {
+    border: 2px solid #199EFF;
+    background-color: transparent;
+    color: #707070;
+    font-size: 18px;
+    height: 39px;
+    width: 150px;
+    border-radius: 8.56px;
+    margin-top: 8px;
+  }
+}
+.line {
+  height: 5px;
+  width: 100%;
+  max-width: 1000px;
+  background-color: #707070;
+  margin-top: 8px;
+}
