@@ -7,6 +7,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProjectsComponent,
     FooterComponent,
   ],
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, RouterModule ],
   exports: [
     GithubComponent,
     HeaderComponent,

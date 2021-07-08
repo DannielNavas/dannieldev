@@ -3,22 +3,22 @@ section {
   height: auto;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   max-width: 1000px;
   flex-wrap: wrap;
 }
 a {
-  margin-left: 16px;
-  color: #5D5DA8;
+  margin-right: 16px;
+  color: #FFFFFF;
   text-decoration: none;
-  .instagram {
-    color: #d6249f;
-  }
-  .linkedin {
-    color: #0e76a8;
-  }
-  .youtube {
-    color: #c4302b;
-  }
+  // .instagram {
+  //   color: #d6249f;
+  // }
+  // .linkedin {
+  //   color: #0e76a8;
+  // }
+  // .youtube {
+  //   color: #c4302b;
+  // }
 }

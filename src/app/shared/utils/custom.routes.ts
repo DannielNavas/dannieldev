@@ -1,5 +1,5 @@
 export enum CustomRoutes {
   portal = '/',
-  blog = 'blog',
+  blog = 'articles',
   cv = 'curriculum'
 }
