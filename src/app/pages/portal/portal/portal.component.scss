@@ -35,6 +35,7 @@
     width: 150px;
     border-radius: 8.56px;
     margin-top: 8px;
+    cursor: pointer;
   }
 }
 .line {
@@ -87,12 +88,4 @@
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
-}
-
-
-footer {
-  // display: flex;
-  height: 46px;
-  width: 100%;
-  // justify-content: center;
 }

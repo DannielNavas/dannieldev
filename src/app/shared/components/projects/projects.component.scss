@@ -18,10 +18,11 @@
   align-content: center;
   text-decoration: none;
   align-items: center;
-}
-.post:hover {
-  background: #FCCF66;
-  cursor: pointer;
+  border-radius: 4px;
+  &:hover {
+    background: #FCCF66;
+    cursor: pointer;
+  }
 }
 a {
   display: flex;
