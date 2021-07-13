@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Posts } from 'src/app/core/models/posts/posts';
 import { PostService } from 'src/app/core/services/firebase/post.service';
+import { CustomRoutes } from '../../utils/custom.routes';
 
 @Component({
   selector: 'app-blog-resumen',
@@ -9,11 +11,11 @@ import { PostService } from 'src/app/core/services/firebase/post.service';
 })
 export class BlogResumenComponent implements OnInit {
   posts: Posts[];
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService, private router: Router) {}
 
   ngOnInit(): void {
     this.postService.getPost().subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       this.posts = data.map((e) => {
         return {
           id: e.payload.doc.id,
@@ -24,6 +26,6 @@ export class BlogResumenComponent implements OnInit {
   }
 
   goToPost(token: string): void {
-    console.log(token);
+    this.router.navigate([CustomRoutes.articles, token ]);
   }
 }

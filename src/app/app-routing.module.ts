@@ -17,7 +17,11 @@ const routes: Routes = [
   },
   {
     loadChildren: () => import('./pages/articles/articles.module').then((m) => m.ArticlesModule),
-    path: CustomRoutes.articles,
+    path: `${ CustomRoutes.articles }/:idarticle`,
+  },
+  {
+    loadChildren: () => import('./pages/portal/portal.module').then((m) => m.PortalModule),
+    path: '**'
   }
 ];
 

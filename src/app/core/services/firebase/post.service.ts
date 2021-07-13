@@ -4,7 +4,6 @@ import {
   AngularFirestoreCollection,
   QuerySnapshot,
 } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 import { Posts } from 'src/app/core/models/posts/posts';
 
 @Injectable({
@@ -32,7 +31,12 @@ export class PostService {
 
   // tslint:disable-next-line: typedef
   getPost() {
-    // TODO ajustar para mostrar los post
     return this.database.collection('posts').snapshotChanges();
+  }
+  getArticle(id: string) {
+    return this.database
+    .collection('posts')
+    .doc(id)
+    .valueChanges();
   }
 }
