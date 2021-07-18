@@ -33,7 +33,7 @@ export class PostService {
   getPost() {
     return this.database.collection('posts').snapshotChanges();
   }
-  getArticle(id: string) {
+  getArticle(id: string): any {
     return this.database
     .collection('posts')
     .doc(id)
