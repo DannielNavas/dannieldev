@@ -76,12 +76,17 @@ describe('YoutubeService', () => {
     let dataError;
     let dataResponse;
 
-    service.getLastesYoutubeVideos().subscribe((response)=> {
-      dataResponse = response;
-    }, (error) => {
-      dataError = error;
-    });
-    const require = httpTestingController.expectOne(`${environment.youtube_endpoint}?part=${environment.youtube_part}&channelId=${environment.youtube_channel}&maxResults=5&order=date&key=${environment.youtube_key}`);
+    service.getLastesYoutubeVideos().subscribe(
+      (response) => {
+        dataResponse = response;
+      },
+      (error) => {
+        dataError = error;
+      }
+    );
+    const require = httpTestingController.expectOne(
+      `${environment.youtube_endpoint}?part=${environment.youtube_part}&channelId=${environment.youtube_channel}&maxResults=5&order=date&key=${environment.youtube_key}`
+    );
 
     require.flush(fakeResponse);
 

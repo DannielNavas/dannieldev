@@ -9,12 +9,11 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
+      declarations: [HeaderComponent],
       schemas: [
-        CUSTOM_ELEMENTS_SCHEMA // Tells Angular we will have custom tags in our templates
-      ]
-    })
-    .compileComponents();
+        CUSTOM_ELEMENTS_SCHEMA, // Tells Angular we will have custom tags in our templates
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -28,10 +27,10 @@ describe('HeaderComponent', () => {
   });
 
   it('should render title', () => {
+    // tslint:disable-next-line: no-shadowed-variable
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.logo').textContent).toContain(' D.N ');
   });
-
 });
