@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { SocialNetworkComponent } from './components/social-network/social-network.component';
+import { YoutubeComponent } from './components/youtube/youtube.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SocialNetworkComponent } from './components/social-network/social-netwo
     ProjectsComponent,
     FooterComponent,
     SocialNetworkComponent,
+    YoutubeComponent,
   ],
   imports: [CommonModule, FontAwesomeModule, RouterModule ],
   exports: [
@@ -25,6 +27,7 @@ import { SocialNetworkComponent } from './components/social-network/social-netwo
     BannerComponent,
     ProjectsComponent,
     FooterComponent,
+    YoutubeComponent,
   ],
 })
 export class SharedModule {}

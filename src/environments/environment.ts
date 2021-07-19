@@ -15,6 +15,7 @@ export const environment = {
     appId: '1:731587744107:web:0de4930a4220889432fc2e',
     measurementId: 'G-HDQFTS9M45',
   },
+  youtube_endpoint: 'https://youtube.googleapis.com/youtube/v3/search',
   youtube_key: 'AIzaSyApbPkFH7_wUdmsJ_17vF6iqw8A7OB04ig',
   youtube_channel: 'UC-WOFSnewqJ1CRjFuZYaYEQ',
   youtube_part: 'snippet'

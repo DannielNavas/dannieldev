@@ -8,23 +8,23 @@ import htmlmodule from 'html';
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss']
 })
-export class ArticlesComponent implements OnInit {
-  idArticle: string;
-  article: any;
-  body: any;
-  constructor( private route: ActivatedRoute, private postService: PostService, ) {
-    this.idArticle = this.route.snapshot.paramMap.get('idarticle');
-  }
+export class ArticlesComponent {
+  // idArticle: string;
+  // article: any;
+  // body: any;
+  // constructor( private route: ActivatedRoute, private postService: PostService, ) {
+  //   this.idArticle = this.route.snapshot.paramMap.get('idarticle');
+  // }
 
-  ngOnInit(): void {
-    this.getAllArticle();
-  }
+  // ngOnInit(): void {
+  //   this.getAllArticle();
+  // }
 
-  getAllArticle(): void {
-    this.postService.getArticle(this.idArticle).subscribe((articles) => {
-      this.article = articles;
-      this.body = htmlmodule.prettyPrint(this.article.body);
-      console.log(this.body);
-    });
-  }
+  // getAllArticle(): void {
+  //   this.postService.getArticle(this.idArticle).subscribe((articles) => {
+  //     this.article = articles;
+  //     this.body = htmlmodule.prettyPrint(this.article.body);
+  //     console.log(this.body);
+  //   });
+  // }
 }

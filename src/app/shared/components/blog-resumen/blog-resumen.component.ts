@@ -11,7 +11,7 @@ import { CustomRoutes } from '../../utils/custom.routes';
 })
 export class BlogResumenComponent implements OnInit {
   posts: Posts[];
-  constructor(private postService: PostService, private router: Router) {}
+  constructor(private postService: PostService) {}
 
   ngOnInit(): void {
     this.postService.getPost().subscribe((data) => {
@@ -23,9 +23,5 @@ export class BlogResumenComponent implements OnInit {
         } as Posts;
       });
     });
-  }
-
-  goToPost(token: string): void {
-    this.router.navigate([CustomRoutes.articles, token ]);
   }
 }
