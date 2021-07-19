@@ -6,13 +6,8 @@ import { faInstagram, faLinkedin, faYoutube } from '@fortawesome/fontawesome-fre
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })
-export class BannerComponent implements OnInit {
+export class BannerComponent {
   linkedin = faLinkedin;
   instagram = faInstagram;
   youtube = faYoutube;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -6,13 +6,8 @@ import { faAngular, faGithub, faInstagram, faLinkedin, faLinkedinIn, faMedium, f
   templateUrl: './social-network.component.html',
   styleUrls: ['./social-network.component.scss']
 })
-export class SocialNetworkComponent implements OnInit {
+export class SocialNetworkComponent {
   linkedin = faLinkedin;
   instagram = faInstagram;
   youtube = faYoutube;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
