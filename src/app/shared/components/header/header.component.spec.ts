@@ -27,6 +27,7 @@ describe('HeaderComponent', () => {
   });
 
   it('should render title', () => {
+    // tslint:disable-next-line: no-shadowed-variable
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;

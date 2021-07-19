@@ -7,7 +7,7 @@ import { GithubService } from 'src/app/core/services/github/github.service';
 import { ProjectsComponent } from './projects.component';
 
 class MockGithubService {
-  getRepos() {
+  getRepos(): any {
     return of([
       {
         id: 150909349,

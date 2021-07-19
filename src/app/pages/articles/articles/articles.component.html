@@ -1,0 +1,22 @@
+<div class="title__post">
+  <div class="title__position">
+    <div class="title__principal">
+      <h1>{{ article?.title }}</h1>
+      <p>Por <b>Danniel Navas</b> en {{ article?.date | date }}</p>
+    </div>
+    <div class="title__image">
+      <img [src]="article?.image" alt="image post">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="article">
+      <code>{{ body }}</code>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

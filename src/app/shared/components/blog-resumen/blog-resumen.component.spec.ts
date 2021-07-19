@@ -10,13 +10,13 @@ import { environment } from 'src/environments/environment';
 import { BlogResumenComponent } from './blog-resumen.component';
 
 class MockPostService {
-  getPost() {
+  getPost(): any {
     return of([
       {
         payload: {
           doc: {
             id: 'AIzaSyD',
-            data() {
+            data(): any {
               return of({});
             },
           },
@@ -52,11 +52,6 @@ describe('BlogResumenComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should go to post', () => {
-    component.goToPost('fakepost');
     expect(component).toBeTruthy();
   });
 });

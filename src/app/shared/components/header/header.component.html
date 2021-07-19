@@ -2,20 +2,16 @@
   <nav class="row">
     <div class="menu">
       <ul>
-        <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
+        <li> <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a> </li>
 
+        <li> <a routerLink="/blog" routerLinkActive="active">Articulos</a> </li>
         <li>
-          <a routerLink="'/routePath'" routerLinkActive="active">Articulos</a>
+          <div class="logo">
+            D.N
+          </div>
         </li>
-        <li>
-          <div class="logo">D.N</div>
-        </li>
-        <li>
-          <a routerLink="'/routePath'" routerLinkActive="active">Sobre mi</a>
-        </li>
-        <li>
-          <a routerLink="'/routePath'" routerLinkActive="active">Contacto</a>
-        </li>
+        <li> <a routerLink="'/routePath'" routerLinkActive="active">Sobre mi</a> </li>
+        <li> <a routerLink="'/routePath'" routerLinkActive="active">Contacto</a> </li>
       </ul>
     </div>
   </nav>
