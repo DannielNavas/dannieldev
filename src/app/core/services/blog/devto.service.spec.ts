@@ -1,18 +1,33 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { of } from 'rxjs';
-import { DevtoService } from 'src/app/core/services/blog/devto.service';
-import { PostService } from 'src/app/core/services/firebase/post.service';
+import { HttpClient } from '@angular/common/http';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
+import { TestBed } from '@angular/core/testing';
 import { environment } from 'src/environments/environment';
 
-import { BlogResumenComponent } from './blog-resumen.component';
+import { DevtoService } from './devto.service';
 
-class MockPostService {
-  getPostDevTo(): any {
-    return of([
+describe('DevtoService', () => {
+  let service: DevtoService;
+  let httpClient: HttpClient;
+  let httpTestingController: HttpTestingController;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+    });
+    service = TestBed.inject(DevtoService);
+    httpClient = TestBed.inject(HttpClient);
+    httpTestingController = TestBed.inject(HttpTestingController);
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it('Should response getProfile', () => {
+    const fakeResponse = [
       {
         type_of: 'article',
         id: 194541,
@@ -63,36 +78,25 @@ class MockPostService {
             'https://res.cloudinary.com/practicaldev/image/fetch/s--8tTU-XkZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://thepracticaldev.s3.amazonaws.com/uploads/organization/profile_image/1/0213bbaa-d5a1-4d25-9e7a-10c30b455af0.png',
         },
       },
-    ]);
-  }
-}
+    ];
 
-describe('BlogResumenComponent', () => {
-  let component: BlogResumenComponent;
-  let fixture: ComponentFixture<BlogResumenComponent>;
+    let dataError;
+    let dataResponse;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [BlogResumenComponent],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA, // Tells Angular we will have custom tags in our templates
-      ],
-      imports: [
-        AngularFireModule.initializeApp(environment.firebase),
-        AngularFirestoreModule,
-        AngularFireStorageModule,
-      ],
-      providers: [{ provide: DevtoService, useClass: MockPostService }],
-    }).compileComponents();
-  });
+    service.getPostDevTo().subscribe(
+      (response) => {
+        dataResponse = response;
+      },
+      (error) => {
+        dataError = error;
+      }
+    );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(BlogResumenComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    const req = httpTestingController.expectOne(`${environment.devto}`);
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    req.flush(fakeResponse);
+
+    expect(req.request.method).toEqual('GET');
+    expect(dataError).toBeUndefined();
   });
 });

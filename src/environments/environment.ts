@@ -18,7 +18,8 @@ export const environment = {
   youtube_endpoint: 'https://youtube.googleapis.com/youtube/v3/search',
   youtube_key: 'AIzaSyApbPkFH7_wUdmsJ_17vF6iqw8A7OB04ig',
   youtube_channel: 'UC-WOFSnewqJ1CRjFuZYaYEQ',
-  youtube_part: 'snippet'
+  youtube_part: 'snippet',
+  devto: 'https://dev.to/api/articles?username=ben'
 };
 
 /*
