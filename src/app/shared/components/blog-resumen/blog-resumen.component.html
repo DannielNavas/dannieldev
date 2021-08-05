@@ -1,10 +1,10 @@
 <!-- inicial post -->
 <div class="container-post">
-  <div class="post" *ngFor="let post of posts">
-    <a (click)="goToPost(post.id)">
-      <div class="date">{{ post.date | date }}</div>
+  <div class="post" *ngFor="let devto of devtos">
+    <a [href]="devto.url" target="_blank">
+      <div class="date">{{ devto.published_at | date }}</div>
       <div class="title-post">
-        <h3>{{ post.title }}.</h3>
+        <h3>{{ devto.title }}.</h3>
       </div>
     </a>
   </div>
