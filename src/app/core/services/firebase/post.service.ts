@@ -4,15 +4,14 @@ import {
   AngularFirestoreCollection,
   QuerySnapshot,
 } from '@angular/fire/firestore';
-import { Posts } from 'src/app/core/models/posts/posts';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
-  private postCollections: AngularFirestoreCollection<Posts>;
+  private postCollections: AngularFirestoreCollection<any>;
   constructor(private database: AngularFirestore) {
-    this.postCollections = this.database.collection<Posts>('posts');
+    this.postCollections = this.database.collection<any>('posts');
   }
 
   // savePost(post: Posts): any {
@@ -33,10 +32,10 @@ export class PostService {
   getPost() {
     return this.database.collection('posts').snapshotChanges();
   }
-  getArticle(id: string): any {
-    return this.database
-    .collection('posts')
-    .doc(id)
-    .valueChanges();
-  }
+  // getArticle(id: string): any {
+  //   return this.database
+  //   .collection('posts')
+  //   .doc(id)
+  //   .valueChanges();
+  // }
 }

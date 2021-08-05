@@ -1,19 +1,21 @@
 <div class="container">
-  <div class="card" *ngFor="let video of myVideos">
-    <a
-      href="https://www.youtube.com/watch?v={{ video.id.videoId }}"
-      target="_blank"
-    >
-      <div class="title-post">
-        <img
-          [src]="video.snippet.thumbnails.high.url"
-          alt="image youtube video"
-        />
-        <h3>
-          {{ video.snippet.title | titlecase }}
-        </h3>
-        <span>{{ video.snippet.publishTime | date }}</span>
-      </div>
-    </a>
-  </div>
+  <ng-container *ngFor="let video of myVideos">
+    <div class="card" *ngIf="video.snippet.title !== 'danniel navas'">
+      <a
+        href="https://www.youtube.com/watch?v={{ video.id.videoId }}"
+        target="_blank"
+      >
+        <div class="title-post">
+          <img
+            [src]="video.snippet.thumbnails.high.url"
+            alt="image youtube video"
+          />
+          <h3>
+            {{ video.snippet.title | titlecase }}
+          </h3>
+          <span>{{ video.snippet.publishTime | date }}</span>
+        </div>
+      </a>
+    </div>
+  </ng-container>
 </div>
