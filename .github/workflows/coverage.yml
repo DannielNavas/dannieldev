@@ -1,14 +1,18 @@
-name: test-pull-request
-on: [pull_request]
+name: CI Angular app through Github Actions
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
 
-      - name: Run Install
-        run: npm i
+      - name: Setup
+        run: npm ci
 
-      - name: Run Jasmine tests
-        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - name: Test
+        run: |
+          npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI

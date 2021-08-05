@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Posts } from 'src/app/core/models/posts/posts';
-import { PostService } from 'src/app/core/services/firebase/post.service';
+import { IPost } from 'src/app/core/models/posts/posts';
+import { DevtoService } from 'src/app/core/services/blog/devto.service';
 
 @Component({
   selector: 'app-blog-resumen',
@@ -8,22 +8,14 @@ import { PostService } from 'src/app/core/services/firebase/post.service';
   styleUrls: ['./blog-resumen.component.scss'],
 })
 export class BlogResumenComponent implements OnInit {
-  posts: Posts[];
-  constructor(private postService: PostService) {}
+  devtos: IPost;
+  constructor(private devtoService: DevtoService) {}
 
   ngOnInit(): void {
-    this.postService.getPost().subscribe((data) => {
-      console.log(data);
-      this.posts = data.map((e) => {
-        return {
-          id: e.payload.doc.id,
-          ...(e.payload.doc.data() as {}),
-        } as Posts;
-      });
-    });
+    this.getData();
   }
 
-  goToPost(token: string): void {
-    console.log(token);
+  getData(): void {
+    this.devtoService.getPostDevTo().subscribe((responseDevTo: IPost) => this.devtos = responseDevTo);
   }
 }

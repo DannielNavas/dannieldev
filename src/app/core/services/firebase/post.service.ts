@@ -4,16 +4,14 @@ import {
   AngularFirestoreCollection,
   QuerySnapshot,
 } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { Posts } from 'src/app/core/models/posts/posts';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
-  private postCollections: AngularFirestoreCollection<Posts>;
+  private postCollections: AngularFirestoreCollection<any>;
   constructor(private database: AngularFirestore) {
-    this.postCollections = this.database.collection<Posts>('posts');
+    this.postCollections = this.database.collection<any>('posts');
   }
 
   // savePost(post: Posts): any {
@@ -32,7 +30,12 @@ export class PostService {
 
   // eslint-disable-next-line
   getPost() {
-    // TODO ajustar para mostrar los post
     return this.database.collection('posts').snapshotChanges();
   }
+  // getArticle(id: string): any {
+  //   return this.database
+  //   .collection('posts')
+  //   .doc(id)
+  //   .valueChanges();
+  // }
 }

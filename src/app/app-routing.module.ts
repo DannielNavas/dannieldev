@@ -17,6 +17,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/cv/cv.module').then((m) => m.CvModule),
     path: CustomRoutes.cv,
   },
+  {
+    loadChildren: () =>
+      import('./pages/articles/articles.module').then((m) => m.ArticlesModule),
+    path: `${CustomRoutes.articles}/:idarticle`,
+  },
+  {
+    loadChildren: () =>
+      import('./pages/portal/portal.module').then((m) => m.PortalModule),
+    path: '**',
+  },
 ];
 
 @NgModule({
