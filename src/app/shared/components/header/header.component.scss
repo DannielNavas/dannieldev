@@ -1,3 +1,4 @@
+@import '../../utils/mixins.scss';
 .container {
   display: flex;
   height: 137px;
@@ -40,6 +41,9 @@
       color: #000;
       opacity: 1;
       text-decoration: none;
+      @include for-phone-only {
+        display:none;
+      }
     }
   }
 }

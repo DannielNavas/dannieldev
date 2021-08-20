@@ -1,5 +1,5 @@
 // ================================================================= post =================================================================//
-
+@import '../../utils/mixins.scss';
 .container-post {
   padding: 24px 0 24px 0;
   justify-content: center;
@@ -19,6 +19,14 @@
   text-decoration: none;
   align-items: center;
   border-radius: 4px;
+  @include for-phone-only {
+    max-width: 358px;
+    height: 80px;
+  }
+  @include for-tablet-portrait-up {
+    max-width: 746px;
+    height: 80px;
+  }
   &:hover {
     background: #FCCF66;
     cursor: pointer;
