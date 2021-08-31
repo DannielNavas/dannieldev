@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IPost } from 'src/app/core/models/posts/posts';
-import { DevtoService } from 'src/app/core/services/blog/devto.service';
+import { IPost } from '@core/models/posts/posts';
+import { DevtoService } from '@core/services/blog/devto.service';
 
 @Component({
   selector: 'app-blog-resumen',

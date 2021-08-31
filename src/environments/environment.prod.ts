@@ -14,5 +14,5 @@ export const environment = {
   youtube_key: 'AIzaSyApbPkFH7_wUdmsJ_17vF6iqw8A7OB04ig',
   youtube_channel: 'UC-WOFSnewqJ1CRjFuZYaYEQ',
   youtube_part: 'snippet',
-  devto: 'https://dev.to/api/articles?username=dannielnavas'
+  devto: 'https://dev.to/api/articles?username=dannieldev'
 };
