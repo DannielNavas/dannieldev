@@ -3,6 +3,9 @@ import { faAngular, faGithub, faMedium } from '@fortawesome/fontawesome-free-bra
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { collection, Firestore } from 'firebase/firestore';
+import { collectionData } from 'rxfire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-portal',
@@ -11,7 +14,14 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 })
 export class PortalComponent implements OnInit {
   posts: number[] = [];
-  constructor() { }
+  item$: Observable<any>;
+  // item$: Observable<Item[]>;
+  constructor(private database: Firestore) {
+    // this.postCollections = this.database.collection<any>('posts');
+    const collections = collection(database, 'aboutme');
+    this.item$ = collectionData(collections);
+    this.item$.subscribe(data => console.log(data));
+  }
 
   ngOnInit(): void {
     this.posts = [

@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-  QuerySnapshot,
-} from '@angular/fire/firestore';
+import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
+interface Item {
+  name: string,
+};
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
-  private postCollections: AngularFirestoreCollection<any>;
-  constructor(private database: AngularFirestore) {
-    this.postCollections = this.database.collection<any>('posts');
+  item$: Observable<any>;
+  // item$: Observable<Item[]>;
+  constructor(private database: Firestore) {
+    // this.postCollections = this.database.collection<any>('posts');
+    const collections = collection(database, 'aboutme');
+    this.item$ = collectionData(collections);
   }
 
   // savePost(post: Posts): any {
@@ -29,9 +32,9 @@ export class PostService {
   // }
 
   // eslint-disable-next-line
-  getPost() {
-    return this.database.collection('posts').snapshotChanges();
-  }
+  // getPost() {
+  //   return this.database.collection('posts').snapshotChanges();
+  // }
   // getArticle(id: string): any {
   //   return this.database
   //   .collection('posts')
