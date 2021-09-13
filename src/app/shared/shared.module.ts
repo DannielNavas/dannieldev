@@ -9,6 +9,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { SocialNetworkComponent } from './components/social-network/social-network.component';
 import { YoutubeComponent } from './components/youtube/youtube.component';
+import { AboutmeprincipalComponent } from './components/aboutmecomponents/aboutmeprincipal/aboutmeprincipal.component';
+import { StackComponent } from './components/aboutmecomponents/stack/stack.component';
+import { PlaylistComponent } from './components/aboutmecomponents/playlist/playlist.component';
+import { PresentationComponent } from './components/aboutmecomponents/presentation/presentation.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { YoutubeComponent } from './components/youtube/youtube.component';
     FooterComponent,
     SocialNetworkComponent,
     YoutubeComponent,
+    AboutmeprincipalComponent,
+    StackComponent,
+    PlaylistComponent,
+    PresentationComponent,
   ],
   imports: [CommonModule, FontAwesomeModule, RouterModule ],
   exports: [

@@ -23,6 +23,10 @@ const routes: Routes = [
     path: `${CustomRoutes.articles}/:idarticle`,
   },
   {
+    loadChildren: () => import('./pages/aboutme/aboutme.module').then((m) => m.AboutmeModule),
+    path: `${CustomRoutes.aboutMe}`,
+  },
+  {
     loadChildren: () =>
       import('./pages/portal/portal.module').then((m) => m.PortalModule),
     path: '**',
