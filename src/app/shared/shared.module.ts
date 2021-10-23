@@ -36,6 +36,10 @@ import { PresentationComponent } from './components/aboutmecomponents/presentati
     ProjectsComponent,
     FooterComponent,
     YoutubeComponent,
+    AboutmeprincipalComponent,
+    StackComponent,
+    PlaylistComponent,
+    PresentationComponent,
   ],
 })
 export class SharedModule {}
