@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faAngular, faGithub, faNodeJs } from '@fortawesome/free-brands-svg-icons';
-import { GithubRepos } from 'src/app/core/models/github/github.repos';
-import { GithubService } from 'src/app/core/services/github/github.service';
+import { GithubRepos } from '@core/models/github/github.repos';
+import { GithubService } from '@core/services/github/github.service';
 import { faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

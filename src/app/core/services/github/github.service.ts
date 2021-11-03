@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { GithubProfile } from '@core/models/github/github.profile';
+import { GithubRepos } from '@core/models/github/github.repos';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { GithubProfile } from '../../models/github/github.profile';
-import { GithubRepos } from '../../models/github/github.repos';
+
 
 @Injectable({
   providedIn: 'root'

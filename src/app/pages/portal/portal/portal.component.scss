@@ -1,6 +1,5 @@
+@import './../../../shared/utils/mixins.scss';
 .container {
-  position: relative;
-  top: 570px;
   display: flex;
   height: auto;
   width: 100%;
@@ -14,6 +13,10 @@
   // background-color: red;
   max-width: 1000px;
   flex-wrap: wrap;
+  @include for-tablet-portrait-up {
+    margin: 0 16px 0 16px;
+  }
+
 }
 .title {
   display: flex;
