@@ -1,12 +1,28 @@
 // ================================================================= footer =================================================================//
-section {
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1000px;
-  flex-wrap: wrap;
+footer {
+  padding: 1.5rem;
+  bottom: 0;
+  display: block;
+  margin: 0;
+  background-color: #282b39;
+  color: #fff;
+}
+.footer {
+  &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+ &__details {
+   width:250px;
+   margin-left: 16px;
+ }
 }
 a {
   margin-right: 16px;

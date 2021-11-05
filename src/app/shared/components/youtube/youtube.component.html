@@ -1,6 +1,6 @@
-<div class="container">
+<section class="container">
   <ng-container *ngFor="let video of myVideos">
-    <div class="card" *ngIf="video.snippet.title !== 'danniel navas'">
+    <article class="card" *ngIf="video.snippet.title !== 'DannielDev'">
       <a
         href="https://www.youtube.com/watch?v={{ video.id.videoId }}"
         target="_blank"
@@ -16,6 +16,6 @@
           <span>{{ video.snippet.publishTime | date }}</span>
         </div>
       </a>
-    </div>
+    </article>
   </ng-container>
-</div>
+</section>
