@@ -1,5 +1,5 @@
 // ================================================================= post =================================================================//
-
+@import '../../utils/mixins.scss';
 .container-post {
   padding: 24px 0 24px 0;
 }
@@ -12,6 +12,14 @@
   flex-wrap: wrap;
   margin: 8px 0 8px 0;
   text-decoration: none;
+  @include for-phone-only {
+    max-width: 358px;
+    height: 32px;
+  }
+  @include for-tablet-portrait-up {
+    width: 746px;
+    height: 32px;
+  }
 }
 .date {
   width: 110px;
@@ -35,7 +43,19 @@
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
+  @include for-phone-only {
+    text-align: left;
+  }
+  @include for-tablet-portrait-up {
+    text-align: left;
+  }
   h3 {
+    @include for-phone-only {
+      font-size: 11px;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 16px;
+    }
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
