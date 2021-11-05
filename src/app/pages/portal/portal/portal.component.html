@@ -35,3 +35,10 @@
     <!-- final footer -->
   </div>
 </div>
+
+
+<ul>
+  <li *ngFor="let item of item$ | async">
+    {{ item.version }}
+  </li>
+</ul>
