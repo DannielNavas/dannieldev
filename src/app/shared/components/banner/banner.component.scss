@@ -1,6 +1,6 @@
 @import '../../utils/mixins.scss';
-// imagen de usuario
-.imagen-user {
+
+.banner {
   left: 0px;
   width: 100%;
   height: 421px;
@@ -8,159 +8,41 @@
   opacity: 1;
   display: flex;
   justify-content: center;
-}
-.soy {
-  line-height: 0.6;
-  letter-spacing: 0.207em !important;
-  font-style: normal;
-  font-weight: 900;
-}
-.imagen-user-position {
-  position: absolute;
-  display: flex;
   align-items: center;
-  // top: 50px;
-  flex-direction: row;
-  height: auto;
-  max-width: 1000px;
-  width: 100%;
-  height: 421px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.left {
-  width: 631px;
-  @include for-phone-only {
+  h1,h2 {
+    font-family: 'Gabriela', serif;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  &__row {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-width: 1000px;
     width: 100%;
+    flex-wrap: wrap;
   }
-}
-
-// Imagen de banner
-.banner {
-  // width: 352px;
-  height: 352px;
-  border-radius: 50%;
-
-  // background: rgba( 255, 255, 255, 0.25 );
-  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  // backdrop-filter: blur( 4px );
-  // -webkit-backdrop-filter: blur( 4px );
-  // border:2px solid #199EFF;
-  @include for-tablet-portrait-up {
-    display: none;
-  }
-  @include for-phone-only {
-    display: none;
-  }
-
-}
-
-// Nuevo portal
-.circulo-title {
-  top: 163px;
-  left: 84px;
-  width: 277px;
-  height: 178px;
-  opacity: 1;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  h1 {
-    margin-left: 86px;
-    font-size: 68px;
-    width: 496px;
-    font-size: 72px;
-    @include for-phone-only {
-      text-align: center;
-      margin-left: 0px;
-      font-size: 48px;
-      width: 375px;
-
+  &__title {
+    width: 100%;
+    text-align: center;
+    h1 {
+      font-size: 3.5rem;
     }
   }
-}
-
-.text-second {
-  top: 463px;
-  left: 135px;
-  width: 620px;
-  height: 58px;
-  text-align: left;
-  letter-spacing: 0px;
-  opacity: 1;
-  margin-left: 87px;
-  @include for-phone-only {
+  &__subtitle {
     text-align: center;
-    margin-left: 0px;
-    width: 375px;
+    width: 100%;
+    h3 {
+      color: #3B3939;
+    }
+    &-text{
+      font: normal normal normal 22px/33px Arial;
+      letter-spacing: 0px;
+      color: #3B3939;
+      b {
+        font: normal normal bold 22px/33px Arial;
+      }
+    }
   }
-  h3 {
-    color: #3B3939;
-    margin: 0 0 16px 0;
-  }
-}
-
-.second-text {
-  font: normal normal normal 22px/33px Arial;
-  letter-spacing: 0px;
-  color: #3B3939;
-  b {
-    font: normal normal bold 22px/33px Arial;
-  }
-}
-
-.imagen-user h1,h2 {
-  font-family: 'Gabriela', serif;
-  margin-top: 16px !important;
-  margin-bottom: 0 !important;
-}
-.container {
-  position: relative;
-  top: 570px;
-  display: flex;
-  height: auto;
-  width: 100%;
-  justify-content: center;
-}
-.row {
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  // background-color: red;
-  max-width: 1000px;
-  flex-wrap: wrap;
-}
-.title {
-  display: flex;
-  flex-direction: row;
-  align-content: space-around;
-  height: auto;
-  width: 100%;
-  max-width: 1000px;
-  justify-content: space-between;
-  h2 {
-    color: #707070;
-  }
-  button {
-    border: 2px solid #199EFF;
-    background-color: transparent;
-    color: #707070;
-    font-size: 18px;
-    height: 39px;
-    width: 150px;
-    border-radius: 8.56px;
-    margin-top: 8px;
-  }
-}
-.line {
-  height: 5px;
-  width: 100%;
-  max-width: 1000px;
-  background-color: #707070;
-  margin-top: 8px;
 }
