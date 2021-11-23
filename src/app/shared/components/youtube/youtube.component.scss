@@ -1,8 +1,13 @@
+@import '../../utils/mixins.scss';
 .container {
-  padding: 24px 0 24px 0;
+  padding: 0 16px 0 16px;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  @include for-desktop-up {
+    padding: 24px 0 24px 0;
+  }
 }
 .card {
   display: flex;
