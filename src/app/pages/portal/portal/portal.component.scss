@@ -13,6 +13,7 @@
   // background-color: red;
   max-width: 1000px;
   flex-wrap: wrap;
+  z-index: 1;
   @include for-tablet-portrait-up {
     margin: 0 16px 0 16px;
   }
@@ -26,6 +27,7 @@
   width: 100%;
   max-width: 1000px;
   justify-content: space-between;
+  padding: 0 8px 0 8px;
   h2 {
     color: #707070;
   }
