@@ -1,5 +1,7 @@
 # https://danniel.dev
 
+[![Deploy to Firebase Hosting on PR](https://github.com/DannielNavas/dannieldev/actions/workflows/preview-deploy.yaml/badge.svg)](https://github.com/DannielNavas/dannieldev/actions/workflows/preview-deploy.yaml)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
 ## Development server
