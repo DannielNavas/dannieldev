@@ -1,8 +1,15 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/variables.scss';
+
 .container {
-  padding: 24px 0 24px 0;
+  padding: 0 16px 0 16px;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  @include for-desktop-up {
+    padding: 24px 0 24px 0;
+  }
 }
 .card {
   display: flex;
@@ -18,7 +25,7 @@
   align-items: center;
   border-radius: 4px;
   &:hover {
-    background: #FCCF66;
+    background: $base-color;
     cursor: pointer;
   }
   img {

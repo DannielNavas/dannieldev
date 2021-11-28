@@ -1,4 +1,6 @@
 // ================================================================= footer =================================================================//
+@import '../../utils/mixins.scss';
+
 footer {
   padding: 1.5rem;
   bottom: 0;
@@ -9,24 +11,23 @@ footer {
 }
 .footer {
   &__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
  &__details {
-   width:346px;
-   margin-left: 16px;
+   width:50%;
+ }
+ &__social {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
  }
 }
 a {
   margin-right: 16px;
-  // color: #FFFFFF;
   text-decoration: none;
   .instagram {
     color: #d6249f;

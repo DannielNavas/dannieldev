@@ -1,15 +1,16 @@
 @import '../../utils/mixins.scss';
+@import '../../utils/variables.scss';
+
 .active {
-  color: #199eff !important;
+  color: $text-color-dark !important;
   font-family: "Gabriela", serif !important;
 }
 
 
 header {
-	width:100%; /* Establecemos que el header abarque el 100% del documento */
-	overflow:hidden; /* Eliminamos errores de float */
-	background:#252932;
-	// margin-bottom:20px;
+	width: 100%; /* Establecemos que el header abarque el 100% del documento */
+	overflow: hidden; /* Eliminamos errores de float */
+	background: $base-color;
 }
 
 .wrapper {
@@ -20,15 +21,15 @@ header {
 }
 
 header .logo {
-	color:#f2f2f2;
+	color:  $text-color-light;
 	font-size:50px;
-	line-height:200px;
+	line-height:100px;
 	float:left;
 }
 
 header nav {
 	float:right;
-	line-height:200px;
+	line-height:100px;
 }
 
 header nav a {
@@ -45,7 +46,7 @@ header nav a {
 }
 
 header nav a:hover {
-	background:#FCCF66;
+	background:$base-color;
   color: #252932;
 	border-radius:50px;
 }
