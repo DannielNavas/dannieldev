@@ -1,5 +1,7 @@
 // ================================================================= post =================================================================//
 @import '../../utils/mixins.scss';
+@import '../../utils/variables.scss';
+
 .container-post {
   padding: 24px 0 24px 0;
 }
@@ -28,7 +30,7 @@
   font-family: 'Gabriela', serif;
   font-size: 11px;
   letter-spacing: 0px;
-  color: #4A4A4A;
+  color: $text-color;
   opacity: 1;
   display: flex;
   justify-content: center;
@@ -41,7 +43,7 @@
   font-family: 'Gabriela', serif;
   font: normal normal bold 15px Helvetica;
   letter-spacing: 0px;
-  color: #000000;
+  color: $text-color;
   opacity: 1;
   @include for-phone-only {
     text-align: left;
@@ -59,9 +61,14 @@
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
+  :hover {
+    color: #000;
+    text-decoration: underline;
+  }
 }
 
 a {
   display: flex;
   cursor: pointer;
+  text-decoration: none;
 }

@@ -1,5 +1,7 @@
 // ================================================================= post =================================================================//
 @import '../../utils/mixins.scss';
+@import '../../utils/variables.scss';
+
 .container-post {
   padding: 24px 0 24px 0;
   justify-content: center;
@@ -34,7 +36,7 @@
     // height: 80px;
   }
   &:hover {
-    background: #FCCF66;
+    background: $base-color;
     cursor: pointer;
   }
 }
