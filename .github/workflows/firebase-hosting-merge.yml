@@ -16,7 +16,8 @@ jobs:
         run: npm run lint
       - name: Unit Test
         run: npm test -- --no-watch --code-coverage --browsers=ChromeHeadlessCI
-      - run: npm run build
+      - name: BuildAndDeploy
+        run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
