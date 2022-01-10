@@ -1,3 +1,4 @@
+import { SimpleChanges } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PresentationComponent } from './presentation.component';
@@ -21,5 +22,18 @@ describe('PresentationComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should ngOnchange playlist', () => {
+    const fakeSimpleChanges = {} as SimpleChanges;
+    component.ngOnChanges(fakeSimpleChanges);
+  });
+  it('should ngOnchange principalData playlist', () => {
+    const fakeSimpleChanges = {} as SimpleChanges;
+    component.data = {
+      items: ["Anime to work", "Tu mundo en español","Developer" ],
+      title: "Playlist stpotify"
+    };
+
+    component.ngOnChanges(fakeSimpleChanges);
   });
 });
