@@ -28,6 +28,11 @@
   max-width: 1000px;
   justify-content: space-between;
   padding: 0 8px 0 8px;
+  @include for-phone-only {
+    flex-direction: column;
+    /* align-content: space-around; */
+    /* justify-content: space-between; */
+  }
   h2 {
     color: #707070;
   }
@@ -41,6 +46,10 @@
     border-radius: 8.56px;
     margin-top: 8px;
     cursor: pointer;
+    @include for-phone-only {
+      height: 47px;
+      width: 100%;
+    }
   }
 }
 .line {
