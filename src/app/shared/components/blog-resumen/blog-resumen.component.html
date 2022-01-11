@@ -1,17 +1,4 @@
-<!-- inicial post -->
-<!-- <div class="container-post">
-  <div class="post" *ngFor="let devto of devtos">
-    <a [href]="devto.url" target="_blank">
-      <div class="date">{{ devto.published_at | date }}</div>
-      <div class="title-post">
-        <h3>{{ devto.title }}.</h3>
-      </div>
-    </a>
-  </div>
-</div> -->
-
 <section>
-
   <article class="post" *ngFor="let devto of devtos">
     <a [href]="devto.url" target="_blank" rel="noopener noreferrer">
     <img [src]="devto.cover_image" [alt]="devto.title">
