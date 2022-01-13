@@ -46,7 +46,6 @@ a {
   width: 100px;
   height: 20px;
   text-align: center;
-  font-family: 'Gabriela', serif;
   font-size: 11px;
   letter-spacing: 0px;
   color: #4A4A4A;
@@ -65,7 +64,6 @@ a {
   @include for-desktop-up {
     width: calc(1000px - 60px);
     height: 22px;
-    font-family: 'Gabriela', serif;
     font: normal normal bold 15px Helvetica;
   }
   h3 {
