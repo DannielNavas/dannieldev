@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 html, body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   color: #282b39;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 800;
+}
+p {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+}
+span {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
 }
