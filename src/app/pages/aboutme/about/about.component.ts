@@ -11,8 +11,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  about: any;
-  initData: Aboutme = new Aboutme();
+  loader: boolean = true;
   aboutme: ResponseAboutMe[];
   principal: Principal;
   presentaciones: Playlist;
@@ -33,6 +32,7 @@ export class AboutComponent implements OnInit {
         }))
       )
     ).subscribe((responseData: ResponseAboutMe[]) => {
+      this.loader = false;
       this.aboutme = responseData;
       let { principal, presentaciones, playlist, secodary, stack  } = responseData[0].datos.body;
       this.principal = principal;
