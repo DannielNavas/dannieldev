@@ -1,4 +1,5 @@
-<article class="container">
+<app-loader *ngIf="loader"></app-loader>
+<article class="container" *ngIf="!loader">
   <div class="row">
     <div *ngFor="let about of aboutme">
       <h1>{{ about.datos.title }}</h1>

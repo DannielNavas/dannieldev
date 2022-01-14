@@ -13,6 +13,7 @@ import { AboutmeprincipalComponent } from './components/aboutmecomponents/aboutm
 import { StackComponent } from './components/aboutmecomponents/stack/stack.component';
 import { PlaylistComponent } from './components/aboutmecomponents/playlist/playlist.component';
 import { PresentationComponent } from './components/aboutmecomponents/presentation/presentation.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PresentationComponent } from './components/aboutmecomponents/presentati
     StackComponent,
     PlaylistComponent,
     PresentationComponent,
+    LoaderComponent,
   ],
   imports: [CommonModule, FontAwesomeModule, RouterModule ],
   exports: [
@@ -40,6 +42,7 @@ import { PresentationComponent } from './components/aboutmecomponents/presentati
     StackComponent,
     PlaylistComponent,
     PresentationComponent,
+    LoaderComponent,
   ],
 })
 export class SharedModule {}
