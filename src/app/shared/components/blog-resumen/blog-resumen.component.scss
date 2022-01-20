@@ -60,3 +60,28 @@ section {
     }
   }
 }
+.post {
+  &__link {
+    height: auto;
+    width: 100%;
+    max-width: 47%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-button {
+      background-color:#0d1117;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      width: 300px;
+      height: 46px;
+      &:hover {
+        background-color: #0d1117;
+      }
+    }
+  }
+}
