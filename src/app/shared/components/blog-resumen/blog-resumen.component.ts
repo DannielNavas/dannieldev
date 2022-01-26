@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IPost } from '@core/models/posts/posts';
 import { DevtoService } from '@core/services/blog/devto.service';
 import { faDev } from '@fortawesome/free-brands-svg-icons';
@@ -9,6 +9,8 @@ import { faDev } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./blog-resumen.component.scss'],
 })
 export class BlogResumenComponent implements OnInit {
+  @Input() post: number;
+  @Input() button: string;
   devtos: IPost;
   dev = faDev;
   constructor(private devtoService: DevtoService) {}
