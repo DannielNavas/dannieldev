@@ -1,5 +1,5 @@
 <section>
-  <article class="post" *ngFor="let devto of devtos | randomlist:5">
+  <article class="post" *ngFor="let devto of devtos | randomlist: post">
     <a [href]="devto.url" target="_blank" rel="noopener noreferrer">
     <img [src]="devto.cover_image" [alt]="devto.title">
     <div class="info-post">
@@ -11,7 +11,7 @@
     </div>
     </a>
   </article>
-  <div class="post__link">
+  <div class="post__link" *ngIf="button === 'true'">
     <a href="https://dev.to/dannieldev" target="_blank" rel="noopener noreferrer">
       <button class="post__link-button" >
         <fa-icon [icon]="dev" size="1x"></fa-icon>
