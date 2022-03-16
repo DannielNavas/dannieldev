@@ -11,8 +11,9 @@
   <!-- metatags -->
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website" />
-  <meta name="description" content="Hola, soy Danniel Navas. Ingeniero de Sistemas. y un apasionado desarrollado frontend. amo construir y entregar productos de calidad."/>
-  <meta name="keywords" content="Frontend, Angular, Desarrollo"/>
+  <meta name="description"
+    content="Hola, soy Danniel Navas. Ingeniero de Sistemas. y un apasionado desarrollado frontend. amo construir y entregar productos de calidad." />
+  <meta name="keywords" content="Frontend, Angular, Desarrollo" />
   <meta name="author" content="Danniel Navas" />
   <meta name="copyright" content="Danniel Navas" />
   <meta name="application-name" content="Danniel Navas" />
@@ -22,7 +23,7 @@
   <app-root></app-root>
   <!-- Google Adsends -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8008078455093700"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDQFTS9M45"></script>
   <script>
@@ -32,6 +33,18 @@
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
+
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'GTM-MDF75Z6', {
+      'send_page_view': false
+    });
 
   </script>
 </body>

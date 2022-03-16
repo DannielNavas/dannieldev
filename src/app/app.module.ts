@@ -9,6 +9,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { GtagModule } from 'angular-gtag';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,10 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
+    GtagModule.forRoot({
+      trackingId: 'GTM-MDF75Z6',
+      trackPageviews: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
