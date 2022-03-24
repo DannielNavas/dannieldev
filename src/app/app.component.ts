@@ -15,7 +15,7 @@ export class AppComponent {
       filter((event) => event instanceof NavigationEnd)
     );
     navEndEvents$.subscribe((event: NavigationEnd) => {
-      gtag('config', 'G-HDQFTS9M45', {
+      gtag('config', 'G-P0T112JGRY', {
         page_path: event.urlAfterRedirects,
       });
       this.gtag2.pageview({
