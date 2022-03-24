@@ -17,7 +17,15 @@
   <meta name="author" content="Danniel Navas" />
   <meta name="copyright" content="Danniel Navas" />
   <meta name="application-name" content="Danniel Navas" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0T112JGRY"></script>
+</head>
+
+<body>
+  <app-root></app-root>
+  <!-- Google Adsends -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8008078455093700"
+    crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDQFTS9M45"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -26,13 +34,19 @@
     }
     gtag('js', new Date());
 
-    gtag('config', 'G-P0T112JGRY');
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'GTM-MDF75Z6', {
+      'send_page_view': false
+    });
 
   </script>
-</head>
-
-<body>
-  <app-root></app-root>
 </body>
 
 </html>
