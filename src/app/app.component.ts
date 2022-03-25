@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 import { Gtag } from 'angular-gtag';
 import { filter } from 'rxjs/operators';
 declare var gtag;
@@ -10,19 +11,20 @@ declare var gtag;
 })
 export class AppComponent {
   title = 'danniel.dev';
-  constructor(private router: Router, private gtag2: Gtag) {
+  constructor(
+    private router: Router,
+    private gtmService: GoogleTagManagerService
+  ) {
+    this.gtmService.addGtmToDom();
     const navEndEvents$ = this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd)
     );
     navEndEvents$.subscribe((event: NavigationEnd) => {
-      gtag('config', 'G-HDQFTS9M45', {
-        page_path: event.urlAfterRedirects,
-      });
-      this.gtag2.pageview({
-        page_title: 'Lesson Feed',
-        page_path: event.urlAfterRedirects,
-        page_location: `https:/danniel.dev/${event.urlAfterRedirects}`,
-      });
+      const gtmTag = {
+        event: 'page-view',
+        page: event.urlAfterRedirects,
+      };
+      this.gtmService.pushTag(gtmTag);
     });
   }
 }

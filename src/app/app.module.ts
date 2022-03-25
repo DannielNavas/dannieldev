@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { GtagModule } from 'angular-gtag';
+import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,9 +22,8 @@ import { GtagModule } from 'angular-gtag';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    GtagModule.forRoot({
-      trackingId: 'GTM-MDF75Z6',
-      trackPageviews: true,
+    GoogleTagManagerModule.forRoot({
+      id: 'GTM-5QTQ52F',
     }),
   ],
   providers: [],
