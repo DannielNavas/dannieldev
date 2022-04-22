@@ -15,4 +15,4 @@ jobs:
 
       - name: Linter
         run: |
-          ng lint
+          npm run lint
