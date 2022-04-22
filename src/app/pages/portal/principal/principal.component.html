@@ -1,0 +1,17 @@
+<nav>
+  <app-header></app-header>
+  <app-banner></app-banner>
+</nav>
+<section>
+  <div class="principal__row">
+    <h2>Articulos</h2>
+    <div class="principal__line"></div>
+    <app-article *ngFor="let dato of datos"></app-article>
+    <h2>Proyectos</h2>
+    <div class="principal__line"></div>
+    <app-article *ngFor="let dato of datos"></app-article>
+    <h2>Videos</h2>
+    <div class="principal__line"></div>
+    <app-article *ngFor="let youtube of dataYoutube.items"></app-article>
+  </div>
+</section>

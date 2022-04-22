@@ -1,0 +1,28 @@
+nav {
+    background-image: linear-gradient(to right bottom, #23536d, #1e4c73, #2a4376, #3e3873, #532869);
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.principal {
+    &__row {
+        height: auto;
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    &__line {
+        height: 1px;
+        width: 100%;
+        background: #e6e6e6;
+    }
+}
