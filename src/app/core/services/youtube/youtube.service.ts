@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RequestYoutube } from '@core/models/youtube/request-youtube';
-import { ResponseYoutube } from '@core/models/youtube/response-youtube';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
