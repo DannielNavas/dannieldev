@@ -6,8 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./article.component.scss'],
 })
 export class ArticleComponent {
-  @Input() datos: any;
-  constructor() {
-    console.log(this.datos);
-  }
+  constructor() {}
 }
