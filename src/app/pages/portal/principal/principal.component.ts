@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IResponseStatistics } from '@core/models/statistic/response-statistec';
 import { RequestYoutube } from '@core/models/youtube/request-youtube';
+import { DevtoService } from '@core/services/devto/devto.service';
 import { YoutubeService } from '@core/services/youtube/youtube.service';
 
 @Component({
@@ -10,20 +12,31 @@ import { YoutubeService } from '@core/services/youtube/youtube.service';
 export class PrincipalComponent implements OnInit {
   datos = [1, 2, 3];
   dataYoutube!: RequestYoutube;
-  constructor(private youtubeService: YoutubeService) {}
+  constructor(
+    private youtubeService: YoutubeService,
+    private devtoService: DevtoService
+  ) {}
   ngOnInit(): void {
     this.getDataYoutube();
+    this.getStatistics();
   }
 
   getDataYoutube(): void {
     this.youtubeService.getLastesYoutubeVideos().subscribe(
       (data) => {
         this.dataYoutube = data;
-        console.log(data);
       },
       (error) => {
         console.log(error);
       }
     );
+  }
+
+  getStatistics(): void {
+    this.devtoService
+      .getDataStatistics()
+      .subscribe((statistics: IResponseStatistics) => {
+        console.log(statistics);
+      });
   }
 }

@@ -20,6 +20,7 @@ export const environment = {
   youtube_channel: 'UC-WOFSnewqJ1CRjFuZYaYEQ',
   youtube_part: 'snippet',
   devto: 'https://dev.to/api/articles?username=dannieldev',
+  statistics: 'http://localhost:3000/statistic',
 };
 
 /*
