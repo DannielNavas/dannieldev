@@ -1,11 +1,15 @@
-<article>
-  <img src="http://www.brokentone.net/sliderThumbs/157.jpg" alt="">
-  <div class="articles__information">
-    <h1>Titulo principal</h1>
-    <span>01-02-1990</span>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas voluptates totam, nulla asperiores corporis
-      sequi
-      repellat </p>
-    <!-- <a href="#">Read more</a> -->
+<section class="post">
+  <article class="post__card" *ngFor="let post of posts?.slice(0,3)">
+    <div class="post__card-image">
+      <img [src]="post.cover_image" [alt]="post.title">
+    </div>
+    <div class="post__card-resumen">
+      <h1>{{post.title}}</h1>
+      <span>{{post.published_at | date}}</span>
+      <p>{{post.description}}</p>
+    </div>
+  </article>
+  <div class="post__redirect">
+    <a routerLink="/blog">Ver todos los posts -></a>
   </div>
-</article>
+</section>

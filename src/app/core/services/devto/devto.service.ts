@@ -11,11 +11,11 @@ import { environment } from 'src/environments/environment';
 export class DevtoService {
   constructor(private http: HttpClient) {}
 
-  getPostDevTo(): Observable<IPost> {
-    return this.http.get<IPost>(environment.devto);
+  getPostDevTo(): Observable<IPost[]> {
+    return this.http.get<IPost[]>(environment.devto);
   }
 
-  getDataStatistics(): Observable<IResponseStatistics> {
+  getStats(): Observable<IResponseStatistics> {
     return this.http.get<IResponseStatistics>(environment.statistics);
   }
 }

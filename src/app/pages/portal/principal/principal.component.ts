@@ -18,7 +18,6 @@ export class PrincipalComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.getDataYoutube();
-    this.getStatistics();
   }
 
   getDataYoutube(): void {
@@ -30,13 +29,5 @@ export class PrincipalComponent implements OnInit {
         console.log(error);
       }
     );
-  }
-
-  getStatistics(): void {
-    this.devtoService
-      .getDataStatistics()
-      .subscribe((statistics: IResponseStatistics) => {
-        console.log(statistics);
-      });
   }
 }

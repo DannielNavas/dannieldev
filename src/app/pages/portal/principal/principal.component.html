@@ -4,14 +4,17 @@
 </nav>
 <section>
   <div class="principal__row">
-    <h2>Articulos</h2>
+    <h2>Publicaciones recientes</h2>
     <div class="principal__line"></div>
-    <app-article *ngFor="let dato of datos"></app-article>
+    <app-article></app-article>
     <h2>Proyectos</h2>
     <div class="principal__line"></div>
-    <app-article *ngFor="let dato of datos"></app-article>
+    <app-article></app-article>
     <h2>Videos</h2>
     <div class="principal__line"></div>
-    <app-article *ngFor="let youtube of dataYoutube?.items"></app-article>
+    <app-article></app-article>
+    <h2>Estadisticas</h2>
+    <div class="principal__line"></div>
+    <app-stats></app-stats>
   </div>
 </section>
