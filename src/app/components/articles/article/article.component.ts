@@ -16,7 +16,6 @@ export class ArticleComponent implements OnInit {
 
   getPostsDevto(): void {
     this.devtoService.getPostDevTo().subscribe((data) => {
-      console.log(data);
       this.posts = data;
     });
   }

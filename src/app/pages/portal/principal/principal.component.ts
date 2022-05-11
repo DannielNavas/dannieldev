@@ -12,10 +12,7 @@ import { YoutubeService } from '@core/services/youtube/youtube.service';
 export class PrincipalComponent implements OnInit {
   datos = [1, 2, 3];
   dataYoutube!: RequestYoutube;
-  constructor(
-    private youtubeService: YoutubeService,
-    private devtoService: DevtoService
-  ) {}
+  constructor(private youtubeService: YoutubeService) {}
   ngOnInit(): void {
     this.getDataYoutube();
   }
