@@ -6,6 +6,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { BannerModule } from '@components/banner/banner.module';
 import { ArticlesModule } from '@components/articles/articles.module';
 import { HeaderModule } from '@components/header/header.module';
+import { StatsModule } from '@components/stats/stats.module';
 
 @NgModule({
   declarations: [PrincipalComponent],
@@ -15,6 +16,7 @@ import { HeaderModule } from '@components/header/header.module';
     BannerModule,
     ArticlesModule,
     HeaderModule,
+    StatsModule,
   ],
 })
 export class PortalModule {}

@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { YoutubeService } from '@core/services/youtube/youtube.service';
 import { Observable, of } from 'rxjs';
@@ -17,6 +18,7 @@ describe('PrincipalComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [PrincipalComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [{ provide: YoutubeService, useClass: YoutubeServiceMock }],
     }).compileComponents();
   });

@@ -16,4 +16,5 @@ export const environment = {
   youtube_channel: 'UC-WOFSnewqJ1CRjFuZYaYEQ',
   youtube_part: 'snippet',
   devto: 'https://dev.to/api/articles?username=dannieldev',
+  statistics: 'https://backend-danniel-dev.vercel.app/statistic',
 };
