@@ -18,15 +18,9 @@ export class ProjectsComponent implements OnInit {
   getAllProjects(): void {
     this.githubService.getAllProjects().subscribe((data: IResponseGithub[]) => {
       this.projects = data;
-      console.log(data);
     });
   }
 
-  getLenguaje(project: string): void {
-    this.githubService.getLenguajeProject(project).subscribe((data: any) => {
-      console.log(data);
-    });
-  }
   async share(project: string): Promise<void> {
     const shareData = {
       title: 'Danniel Dev',
@@ -36,7 +30,7 @@ export class ProjectsComponent implements OnInit {
     try {
       await navigator.share(shareData);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 }

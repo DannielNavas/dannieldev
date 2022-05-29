@@ -15,9 +15,9 @@ export class GithubService {
       `${environment.github_url}/DannielNavas/repos`
     );
   }
-  getLenguajeProject(project: string): Observable<any> {
-    return this.http.get<IResponseGithub[]>(
-      `https://api.github.com/repos/DannielNavas/${project}/languages`
-    );
-  }
+  //   getLenguajeProject(project: string): Observable<any> {
+  //     return this.http.get<IResponseGithub[]>(
+  //       `https://api.github.com/repos/DannielNavas/${project}/languages`
+  //     );
+  //   }
 }
