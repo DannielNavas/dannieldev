@@ -16,7 +16,14 @@ export class ArticleComponent implements OnInit {
 
   getPostsDevto(): void {
     this.devtoService.getPostDevTo().subscribe((data) => {
-      this.posts = data;
+      this.posts = data
+        .sort((a, b) => {
+          return (
+            new Date(a.published_at).getTime() -
+            new Date(b.published_at).getTime()
+          );
+        })
+        .slice(0, 3);
     });
   }
 }

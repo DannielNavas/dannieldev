@@ -1,14 +1,16 @@
 <section class="post">
-  <article class="post__card" *ngFor="let post of posts?.slice(0,3)">
-    <div class="post__card-image">
-      <img [src]="post.cover_image" [alt]="post.title">
-    </div>
-    <div class="post__card-resumen">
-      <h1>{{post.title}}</h1>
-      <span>{{post.published_at | date}}</span>
-      <p>{{post.description}}</p>
-    </div>
-  </article>
+  <a routerLink="/blog" *ngFor="let post of posts">
+    <article class="post__card">
+      <div class="post__card-image">
+        <img [src]="post.cover_image" [alt]="post.title">
+      </div>
+      <div class="post__card-resumen">
+        <h1>{{post.title}}</h1>
+        <span>{{post.published_at | date}}</span>
+        <p>{{post.description}}</p>
+      </div>
+    </article>
+  </a>
   <div class="post__redirect">
     <a routerLink="/blog">Ver todos los posts -></a>
   </div>

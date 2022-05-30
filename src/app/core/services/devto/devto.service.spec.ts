@@ -98,4 +98,23 @@ describe('DevtoService', () => {
     expect(req.request.method).toEqual('GET');
     expect(dataError).toBeUndefined();
   });
+
+  it('should response stats service', () => {
+    const fakeResponse = {} as any;
+    let dataError;
+    let dataResponse;
+
+    service.getStats().subscribe(
+      (response) => {
+        dataResponse = response;
+      },
+      (error) => {
+        dataError = error;
+      }
+    );
+    const req = httpTestingController.expectOne(environment.statistics);
+    req.flush(fakeResponse);
+    expect(req.request.method).toEqual('GET');
+    expect(dataError).toBeUndefined();
+  });
 });

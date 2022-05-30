@@ -8,7 +8,7 @@ import { GithubService } from '@core/services/github/github.service';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-  projects!: IResponseGithub[];
+  projects!: any[];
   constructor(private githubService: GithubService) {}
 
   ngOnInit(): void {

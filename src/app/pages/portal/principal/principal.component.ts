@@ -19,13 +19,10 @@ export class PrincipalComponent implements OnInit {
   }
 
   getDataYoutube(): void {
-    this.youtubeService.getLastesYoutubeVideos().subscribe(
-      (data: ResponseYoutube) => {
+    this.youtubeService
+      .getLastesYoutubeVideos()
+      .subscribe((data: ResponseYoutube) => {
         this.dataYoutube = data;
-      },
-      (error: any) => {
-        console.error(error);
-      }
-    );
+      });
   }
 }
