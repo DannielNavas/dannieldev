@@ -1,29 +1,39 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IPost } from '@core/models/devto/response-devto';
-import { DevtoService } from '@core/services/devto/devto.service';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
 })
-export class ArticleComponent implements OnInit {
-  posts!: IPost[];
-  constructor(private devtoService: DevtoService) {}
-  ngOnInit(): void {
-    this.getPostsDevto();
-  }
-
-  getPostsDevto(): void {
-    this.devtoService.getPostDevTo().subscribe((data) => {
-      this.posts = data
-        .sort((a, b) => {
-          return (
-            new Date(a.published_at).getTime() -
-            new Date(b.published_at).getTime()
-          );
-        })
-        .slice(0, 3);
-    });
-  }
+export class ArticleComponent {
+  @Input() posts: IPost = {
+    type_of: '',
+    id: 0,
+    title: '',
+    description: '',
+    cover_image: '',
+    readable_publish_date: '',
+    social_image: '',
+    tag_list: [],
+    tags: '',
+    slug: '',
+    path: '',
+    url: '',
+    canonical_url: '',
+    comments_count: 0,
+    positive_reactions_count: 0,
+    public_reactions_count: 0,
+    collection_id: null,
+    created_at: '',
+    edited_at: '',
+    crossposted_at: null,
+    published_at: '',
+    last_comment_at: '',
+    published_timestamp: '',
+    reading_time_minutes: 0,
+    user: {} as any,
+    organization: {} as any,
+  };
+  constructor() {}
 }

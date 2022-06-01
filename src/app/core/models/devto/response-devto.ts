@@ -16,12 +16,12 @@ export interface IPost {
   positive_reactions_count: number;
   public_reactions_count: number;
   collection_id: null;
-  created_at: Date;
-  edited_at: Date;
+  created_at: string;
+  edited_at: string;
   crossposted_at: null;
-  published_at: Date;
-  last_comment_at: Date;
-  published_timestamp: Date;
+  published_at: string;
+  last_comment_at: string;
+  published_timestamp: string;
   reading_time_minutes: number;
   user: User;
   organization: Organization;

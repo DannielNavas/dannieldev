@@ -26,3 +26,12 @@ section {
         background: #e6e6e6;
     }
 }
+
+.post {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        margin: 3px 0;
+    }
+}

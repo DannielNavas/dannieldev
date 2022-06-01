@@ -6,7 +6,9 @@
   <div class="principal__row">
     <h2>Publicaciones recientes</h2>
     <div class="principal__line"></div>
-    <app-article></app-article>
+    <section class="post" *ngFor="let post of posts">
+      <app-article [posts]="post"></app-article>
+    </section>
     <h2>Proyectos</h2>
     <div class="principal__line"></div>
     <app-projects></app-projects>
