@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IResponseGithub } from '@core/models/github/response-github';
 import { GithubService } from '@core/services/github/github.service';
 
@@ -7,19 +7,10 @@ import { GithubService } from '@core/services/github/github.service';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
-export class ProjectsComponent implements OnInit {
-  projects!: any[];
-  constructor(private githubService: GithubService) {}
-
-  ngOnInit(): void {
-    this.getAllProjects();
-  }
-
-  getAllProjects(): void {
-    this.githubService.getAllProjects().subscribe((data: IResponseGithub[]) => {
-      this.projects = data;
-    });
-  }
+export class ProjectsComponent {
+  projects!: IResponseGithub;
+  @Input() project!: IResponseGithub;
+  constructor() {}
 
   async share(project: string): Promise<void> {
     const shareData = {

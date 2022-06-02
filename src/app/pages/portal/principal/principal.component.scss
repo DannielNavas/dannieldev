@@ -27,11 +27,18 @@ section {
     }
 }
 
-.post {
+.order {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
 
-    a {
-        margin: 3px 0;
-    }
+.videos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: auto;
+    width: 100%;
+    min-width: 1000px;
+    gap: .5rem;
 }

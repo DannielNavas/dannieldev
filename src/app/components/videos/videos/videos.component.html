@@ -1,10 +1,6 @@
-<section class="videos">
-  <article class="videos__card" *ngFor="let video of videos">
-    <a [href]="'https://www.youtube.com/watch?v='+videos.id?.videoId" *ngIf="video.snippet.title !== 'DannielDev'"
-      target="_blank">
-      <img [src]="video.snippet.thumbnails.high.url" alt="imagen">
-      <h4>{{video.snippet.title}}</h4>
-    </a>
-    {{videos.id | json}}
-  </article>
-</section>
+<article class="card" *ngIf="video?.snippet?.title !== 'DannielDev'">
+  <a [href]="'https://www.youtube.com/watch?v='+video.id?.videoId" target="_blank">
+    <img [src]="video?.snippet?.thumbnails?.high?.url" [alt]="video?.snippet?.title" loading="lazy">
+    <h4>{{video?.snippet?.title}}</h4>
+  </a>
+</article>

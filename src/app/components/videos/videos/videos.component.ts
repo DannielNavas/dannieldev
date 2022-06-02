@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Item } from '@core/models/youtube/response-youtube';
 import { YoutubeService } from '@core/services/youtube/youtube.service';
 
 @Component({
@@ -6,17 +7,9 @@ import { YoutubeService } from '@core/services/youtube/youtube.service';
   templateUrl: './videos.component.html',
   styleUrls: ['./videos.component.scss'],
 })
-export class VideosComponent implements OnInit {
-  videos: any;
-  constructor(private youtubeService: YoutubeService) {}
-
-  ngOnInit(): void {
-    this.getAllVideos();
-  }
-
-  getAllVideos(): void {
-    this.youtubeService.getLastesYoutubeVideos().subscribe((data) => {
-      this.videos = data.items;
-    });
+export class VideosComponent {
+  @Input() video!: Item;
+  constructor() {
+    console.log(this.video);
   }
 }

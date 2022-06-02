@@ -1,7 +1,7 @@
 <a routerLink="/blog">
   <article class="card">
     <div class="card__image">
-      <img [src]="posts.cover_image" [alt]="posts.title">
+      <img [src]="posts.cover_image" [alt]="posts.title" loading="lazy">
     </div>
     <div class="card__resumen">
       <h1>{{posts.title}}</h1>

@@ -6,7 +6,7 @@ export interface ResponseYoutube {
   items: Item[];
 }
 
-interface Item {
+export interface Item {
   kind: string;
   etag: string;
   id: Id;
