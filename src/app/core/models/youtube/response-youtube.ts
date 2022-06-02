@@ -13,7 +13,7 @@ export interface Item {
   snippet: Snippet;
 }
 
-interface Snippet {
+export interface Snippet {
   publishedAt: string;
   channelId: string;
   title: string;
@@ -24,25 +24,25 @@ interface Snippet {
   publishTime: string;
 }
 
-interface Thumbnails {
+export interface Thumbnails {
   default: Default;
   medium: Default;
   high: Default;
 }
 
-interface Default {
+export interface Default {
   url: string;
   width?: number;
   height?: number;
 }
 
-interface Id {
+export interface Id {
   kind: string;
   videoId?: string;
   channelId?: string;
 }
 
-interface PageInfo {
+export interface PageInfo {
   totalResults: number;
   resultsPerPage: number;
 }
