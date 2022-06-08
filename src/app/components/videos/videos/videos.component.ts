@@ -43,7 +43,5 @@ export class VideosComponent {
       publishTime: '',
     },
   };
-  constructor() {
-    console.log(this.video);
-  }
+  constructor() {}
 }

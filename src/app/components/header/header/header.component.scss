@@ -2,8 +2,8 @@
 
 .active {
     color: $font-color-banner !important;
-    background-color: #199eff !important;
-    border-radius: 16px !important;
+    font-weight: bold;
+    text-decoration: underline !important;
 }
 
 
@@ -41,7 +41,6 @@ header {
             padding: 10px 20px;
             line-height: normal;
             font-size: 20px;
-            font-weight: bold;
             -webkit-transition: all 500ms ease;
             -o-transition: all 500ms ease;
             transition: all 500ms ease;

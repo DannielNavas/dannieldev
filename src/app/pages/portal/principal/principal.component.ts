@@ -52,7 +52,6 @@ export class PrincipalComponent implements OnInit {
 
   getAllVideos(): void {
     this.youtubeService.getLastesYoutubeVideos().subscribe((data) => {
-      console.log(data);
       this.videos = data.items;
     });
   }
