@@ -8,15 +8,7 @@ import { DevtoService } from '@core/services/devto/devto.service';
   styleUrls: ['./stats.component.scss'],
 })
 export class StatsComponent implements OnInit {
-  statsData: IResponseStatistics = {
-    views: 0,
-    reactions: 0,
-    post: 0,
-    public_repos: 0,
-    followers: 0,
-    following: 0,
-    public_gists: 0,
-  };
+  statsData!: IResponseStatistics;
 
   constructor(private devtoService: DevtoService) {}
 
