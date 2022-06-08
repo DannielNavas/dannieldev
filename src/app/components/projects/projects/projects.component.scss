@@ -1,11 +1,16 @@
+@import '../../../shared/utils/mixins.scss';
+
 .cards {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     width: 100%;
-    min-width: 1000px;
     border-radius: 5px;
     border: 1px solid #e5e5e5;
+
+    @include for-desktop-up {
+        min-width: 1000px;
+    }
 
     &__info {
         width: 90%;
@@ -24,10 +29,14 @@
 
     &__actions {
         display: flex;
-        flex-direction: column;
+        flex-flow: row wrap;
         gap: 0.75em;
         color: #333;
         justify-content: center;
+
+        @include for-desktop-up {
+            flex-direction: column;
+        }
 
         a {
             color: #333;

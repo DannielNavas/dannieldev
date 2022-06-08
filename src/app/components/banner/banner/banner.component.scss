@@ -1,4 +1,5 @@
 @import '../../../shared/utils/utils.scss';
+@import '../../../shared/utils/mixins.scss';
 
 .banner {
     display: flex;
@@ -10,14 +11,18 @@
     margin-bottom: 3rem;
 
     &__image {
-        width: 38%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        display: none;
 
-        img {
-            width: 34rem;
+        @include for-desktop-up {
+            width: 38%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            img {
+                width: 34rem;
+            }
         }
     }
 
@@ -30,19 +35,26 @@
         align-content: space-between;
 
         &-card {
-            height: auto;
-            width: auto;
-            background: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 1rem;
-            display: flex;
+            @include for-desktop-up {
+                height: auto;
+                width: auto;
+                background: rgba(255, 255, 255, 0.25);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                padding: 1rem;
+                display: flex;
+            }
 
             span {
-                font-size: 5.5rem;
+                @include for-desktop-up {
+                    display: block;
+                    font-size: 5.5rem;
+                }
+
+                display: none;
             }
 
             p {
