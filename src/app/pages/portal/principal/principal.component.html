@@ -6,13 +6,25 @@
   <div class="principal__row">
     <h2>Publicaciones recientes</h2>
     <div class="principal__line"></div>
-    <app-article></app-article>
+    <section class="order">
+      <div *ngFor="let post of posts">
+        <app-article [posts]="post"></app-article>
+      </div>
+    </section>
     <h2>Proyectos</h2>
     <div class="principal__line"></div>
-    <app-article></app-article>
+    <section class="order">
+      <div *ngFor="let project of projects|randomlist:3 ">
+        <app-projects [project]="project"></app-projects>
+      </div>
+    </section>
     <h2>Videos</h2>
     <div class="principal__line"></div>
-    <app-article></app-article>
+    <section class="videos">
+      <div *ngFor="let video of videos">
+        <app-videos [video]="video"></app-videos>
+      </div>
+    </section>
     <h2>Estadisticas</h2>
     <div class="principal__line"></div>
     <app-stats></app-stats>

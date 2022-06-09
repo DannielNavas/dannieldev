@@ -7,6 +7,9 @@ import { BannerModule } from '@components/banner/banner.module';
 import { ArticlesModule } from '@components/articles/articles.module';
 import { HeaderModule } from '@components/header/header.module';
 import { StatsModule } from '@components/stats/stats.module';
+import { ProjectsModule } from '@components/projects/projects.module';
+import { VideosModule } from '@components/videos/videos.module';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [PrincipalComponent],
@@ -17,6 +20,9 @@ import { StatsModule } from '@components/stats/stats.module';
     ArticlesModule,
     HeaderModule,
     StatsModule,
+    ProjectsModule,
+    VideosModule,
+    SharedModule,
   ],
 })
 export class PortalModule {}

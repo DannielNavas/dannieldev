@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RandomDataPipe } from './pipes/random-data.pipe';
-
-
+import { RepoListPipe } from './pipes/repo-list-pipe.pipe';
+import { ImageErrorDirective } from './directives/image-error.directive';
 
 @NgModule({
-  declarations: [
-    RandomDataPipe
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [RepoListPipe, ImageErrorDirective],
+  imports: [CommonModule],
+  exports: [RepoListPipe, ImageErrorDirective],
 })
-export class SharedModule { }
+export class SharedModule {}

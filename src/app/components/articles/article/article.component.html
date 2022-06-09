@@ -1,15 +1,12 @@
-<section class="post">
-  <article class="post__card" *ngFor="let post of posts?.slice(0,3)">
-    <div class="post__card-image">
-      <img [src]="post.cover_image" [alt]="post.title">
+<a routerLink="/blog">
+  <article class="card">
+    <div class="card__image">
+      <img appImageError [src]="posts?.cover_image" [alt]="posts?.title" loading="lazy">
     </div>
-    <div class="post__card-resumen">
-      <h1>{{post.title}}</h1>
-      <span>{{post.published_at | date}}</span>
-      <p>{{post.description}}</p>
+    <div class="card__resumen">
+      <h1>{{posts?.title}}</h1>
+      <span>{{posts?.published_at | date}}</span>
+      <p>{{posts?.description}}</p>
     </div>
   </article>
-  <div class="post__redirect">
-    <a routerLink="/blog">Ver todos los posts -></a>
-  </div>
-</section>
+</a>
