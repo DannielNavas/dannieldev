@@ -27,12 +27,16 @@
     }
 
     &__technologies {
-        width: calc(100% - 38%);
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: space-between;
+
+        @include for-desktop-up {
+            width: calc(100% - 38%);
+        }
 
         &-card {
             @include for-desktop-up {

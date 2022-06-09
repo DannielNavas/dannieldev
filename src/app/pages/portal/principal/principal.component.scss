@@ -42,9 +42,13 @@ section {
 .videos {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     height: auto;
     width: 100%;
-    min-width: 1000px;
     gap: .5rem;
+
+    @include for-desktop-up {
+        max-width: 1000px;
+        justify-content: space-between;
+    }
 }

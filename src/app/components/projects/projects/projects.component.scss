@@ -32,10 +32,14 @@
         flex-flow: row wrap;
         gap: 0.75em;
         color: #333;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+        justify-self: initial;
+        width: 100%;
 
         @include for-desktop-up {
             flex-direction: column;
+            width: auto;
         }
 
         a {
