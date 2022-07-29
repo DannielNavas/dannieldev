@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IResponseGithub } from '@core/models/github/response-github';
 
 @Pipe({
   name: 'randomlist',
