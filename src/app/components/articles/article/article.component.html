@@ -1,12 +1,12 @@
 <a routerLink="/blog">
-  <article class="card">
-    <div class="card__image">
-      <img appImageError [src]="posts?.cover_image" [alt]="posts?.title" loading="lazy">
-    </div>
-    <div class="card__resumen">
-      <h1>{{posts?.title}}</h1>
-      <span>{{posts?.published_at | date}}</span>
-      <p>{{posts?.description}}</p>
-    </div>
-  </article>
+    <article class="card">
+        <div class="card__image">
+            <img appImageError [src]="posts.cover_image" [alt]="posts.title" loading="lazy">
+        </div>
+        <div class="card__resumen">
+            <h1>{{posts.title}}</h1>
+            <span>{{posts.published_at | date}}</span>
+            <p>{{posts.description}}</p>
+        </div>
+    </article>
 </a>
