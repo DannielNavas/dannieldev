@@ -1,0 +1,58 @@
+@import '../../../shared/utils/mixins.scss';
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    :hover {
+        background-color: #e5e5e5;
+
+    }
+
+    &__card {
+        height: 100px;
+        width: 100%;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+
+        @include for-desktop-up {
+            width: 490px;
+        }
+
+        p {
+            height: auto;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            @include for-desktop-up {
+                width: 490px;
+            }
+        }
+
+        h1 {
+            height: auto;
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            @include for-desktop-up {
+                width: 490px;
+            }
+        }
+
+
+    }
+}

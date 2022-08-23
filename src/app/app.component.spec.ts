@@ -7,10 +7,8 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [AppComponent],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA, // Tells Angular we will have custom tags in our templates
-      ],
     }).compileComponents();
   });
 
@@ -20,9 +18,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'dannieldev'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('danniel.dev');
-  });
+  //   it(`should have as title 'newDannielDev'`, () => {
+  //     const fixture = TestBed.createComponent(AppComponent);
+  //     const app = fixture.componentInstance;
+  //     expect(app.title).toEqual('newDannielDev');
+  //   });
+
+  //   it('should render title', () => {
+  //     const fixture = TestBed.createComponent(AppComponent);
+  //     fixture.detectChanges();
+  //     const compiled = fixture.nativeElement as HTMLElement;
+  //     expect(compiled.querySelector('.content span')?.textContent).toContain('newDannielDev app is running!');
+  //   });
 });

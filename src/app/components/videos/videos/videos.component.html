@@ -1,0 +1,6 @@
+<article class="card" *ngIf="video.snippet.title !== 'DannielDev'">
+    <a [href]="'https://www.youtube.com/watch?v='+video.id.videoId" target="_blank">
+        <img appImageError [src]="video.snippet.thumbnails.high.url" [alt]="video.snippet.title" loading="lazy">
+        <h4>{{video.snippet.title}}</h4>
+    </a>
+</article>
