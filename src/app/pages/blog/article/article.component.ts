@@ -1,6 +1,7 @@
-import { AfterContentInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IArticle } from '@core/models/devto/article.interface';
+import { IUser } from '@core/models/devto/user.interace';
 import { DevtoService } from '@core/services/devto/devto.service';
 
 @Component({
@@ -45,6 +46,18 @@ export class ArticleComponent implements OnInit {
             profile_image_90: '',
         }
     };
+    user: IUser = {
+        type_of: '',
+        id: 0,
+        username: '',
+        name: '',
+        summary: '',
+        twitter_username: '',
+        github_username: '',
+        location: '',
+        joined_at: '',
+        profile_image: ''
+    };
 
     constructor(private route: ActivatedRoute, private devtoService: DevtoService) { }
 
@@ -56,6 +69,7 @@ export class ArticleComponent implements OnInit {
         if (this.id) {
             this.devtoService.getpost(this.id).subscribe((article: IArticle) => {
                 this.article = article;
+                this.getDataUser(article.user.user_id);
                 setTimeout(() => {
                     document.querySelectorAll('img').forEach((image) => {
                         if (image.width > 700) {
@@ -74,6 +88,10 @@ export class ArticleComponent implements OnInit {
                 }, 1000)
             })
         }
+    }
+
+    getDataUser(id: number): void {
+        this.devtoService.getDataUser(id).subscribe((data: IUser) => this.user = data)
     }
 
 }

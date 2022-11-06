@@ -8,7 +8,10 @@
             <div class="article__content" [innerHTML]="article.body_html"></div>
         </div>
         <div class="information">
-            <h1>About me</h1>
+            <app-aboutme [userData]="user"></app-aboutme>
+            <app-detailsarticle [comments]="article.comments_count" [datePublish]="article.published_at"
+                [reactions]="article.public_reactions_count" [tags]="article.tags"
+                [readingTimeMinutes]="article.reading_time_minutes"></app-detailsarticle>
         </div>
     </div>
 </article>

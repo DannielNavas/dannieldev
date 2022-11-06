@@ -22,4 +22,8 @@ export class DevtoService {
     getpost(id: string): Observable<IArticle> {
         return this.http.get<IArticle>(`https://dev.to/api/articles/${id}`);
     }
+
+    getDataUser(id: number): Observable<any> {
+        return this.http.get<any>(`https://dev.to/api/users/${id}`);
+    }
 }

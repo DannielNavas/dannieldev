@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IUser } from '@core/models/devto/user.interace';
 
 @Component({
-  selector: 'app-aboutme',
-  templateUrl: './aboutme.component.html',
-  styleUrls: ['./aboutme.component.scss']
+    selector: 'app-aboutme',
+    templateUrl: './aboutme.component.html',
+    styleUrls: ['./aboutme.component.scss']
 })
-export class AboutmeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class AboutmeComponent {
+    @Input() userData!: IUser;
+    constructor() { }
 
 }

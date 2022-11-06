@@ -28,7 +28,7 @@ export interface IArticle {
     user: User;
 }
 
-export interface User {
+interface User {
     name: string;
     username: string;
     twitter_username: string;

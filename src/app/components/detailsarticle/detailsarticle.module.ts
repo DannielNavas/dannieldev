@@ -5,11 +5,12 @@ import { DetailsarticleComponent } from './detailsarticle.component';
 
 
 @NgModule({
-  declarations: [
-    DetailsarticleComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        DetailsarticleComponent
+    ],
+    imports: [
+        CommonModule
+    ],
+    exports: [DetailsarticleComponent]
 })
 export class DetailsarticleModule { }

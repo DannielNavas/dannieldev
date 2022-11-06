@@ -1,1 +1,19 @@
-<p>detailsarticle works!</p>
+<div class="container">
+    <h2>Detalles</h2>
+    <p>✍️ Publicado el {{datePublish | date}}</p>
+    <h2>Tiempo de lectura</h2>
+    <p>👓 {{readingTimeMinutes}} Min</p>
+    <h2>Interacciones</h2>
+    <div class="interections">
+        <p class="interections__text"> 💬 {{comments}}</p>
+        <p class="interections__text"> ❤️ {{reactions}}</p>
+    </div>
+    <h2>tags</h2>
+    <div class="tags">
+        <ng-container *ngFor="let tag of tags">
+            <div class="tag">
+                <p class="tag__text">{{tag}}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>

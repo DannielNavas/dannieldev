@@ -5,11 +5,12 @@ import { AboutmeComponent } from './aboutme.component';
 
 
 @NgModule({
-  declarations: [
-    AboutmeComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        AboutmeComponent
+    ],
+    imports: [
+        CommonModule
+    ],
+    exports: [AboutmeComponent]
 })
 export class AboutmeModule { }

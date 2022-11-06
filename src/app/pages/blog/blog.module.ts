@@ -6,6 +6,8 @@ import { BlogComponent } from './blog.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticleModule } from '@components/articles/articles.module';
 import { NavigationModule } from '@components/navigation/navigation.module';
+import { AboutmeModule } from '@components/aboutme/aboutme.module';
+import { DetailsarticleModule } from '@components/detailsarticle/detailsarticle.module';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { NavigationModule } from '@components/navigation/navigation.module';
         BlogRoutingModule,
         ArticleModule,
         NavigationModule,
+        AboutmeModule,
+        DetailsarticleModule
     ]
 })
 export class BlogModule { }
