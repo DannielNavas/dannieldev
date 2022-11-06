@@ -1,0 +1,46 @@
+.principal {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    &__row {
+        height: auto;
+        width: 100%;
+        max-width: 1160px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+}
+
+.article {
+    height: auto;
+    width: 100%;
+    max-width: 716px;
+    display: flex;
+    flex-flow: column wrap;
+    overflow-wrap: break-word;
+
+    &__content {
+        width: 100%;
+        max-width: 716px;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 716px;
+    }
+}
+
+.information {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+.highlight.js-code-highlight {
+    background-color: red;
+    color: white;
+}

@@ -1,12 +1,14 @@
-<a [href]="posts.url" target="_blank" rel="noopener noreferrer">
-    <article class="card">
-        <div class="card__image">
-            <img appImageError [src]="posts.cover_image" [alt]="posts.title" loading="lazy">
-        </div>
-        <div class="card__resumen">
-            <h1>{{posts.title}}</h1>
-            <span>{{posts.published_at | date}}</span>
-            <p>{{posts.description}}</p>
-        </div>
-    </article>
-</a>
+<ng-container *ngIf="posts">
+    <a [routerLink]="['/blog/article/', posts.id]">
+        <article class="card">
+            <div class="card__image">
+                <img appImageError [src]="posts.cover_image" [alt]="posts.title" loading="lazy">
+            </div>
+            <div class="card__resumen">
+                <h1>{{posts.title}}</h1>
+                <span>{{posts.published_at | date}}</span>
+                <p>{{posts.description}}</p>
+            </div>
+        </article>
+    </a>
+</ng-container>

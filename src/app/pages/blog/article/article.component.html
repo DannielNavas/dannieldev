@@ -1,1 +1,14 @@
-<p>article works!</p>
+<nav>
+    <app-navigation color="#00bcd4"></app-navigation>
+</nav>
+<article class="principal">
+    <div class="principal__row">
+        <div class="article">
+            <h1>{{article.title}}</h1>
+            <div class="article__content" [innerHTML]="article.body_html"></div>
+        </div>
+        <div class="information">
+            <h1>About me</h1>
+        </div>
+    </div>
+</article>

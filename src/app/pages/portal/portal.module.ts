@@ -4,9 +4,9 @@ import { CommonModule } from '@angular/common';
 import { PortalRoutingModule } from './portal-routing.module';
 import { PrincipalComponent } from './principal/principal.component';
 import { BannerModule } from '@components/banner/banner.module';
-import { ArticlesModule } from '@components/articles/articles.module';
+import { ArticleModule } from '@components/articles/articles.module';
 import { StatsModule } from '@components/stats/stats.module';
-import { ProjectsModule } from '@components/projects/projects.module';
+import { ProjectModule } from '@components/projects/projects.module';
 import { VideosModule } from '@components/videos/videos.module';
 import { SharedModule } from '@shared/shared.module';
 import { NavigationModule } from '@components/navigation/navigation.module';
@@ -17,10 +17,10 @@ import { NavigationModule } from '@components/navigation/navigation.module';
         CommonModule,
         PortalRoutingModule,
         BannerModule,
-        ArticlesModule,
+        ArticleModule,
         NavigationModule,
         StatsModule,
-        ProjectsModule,
+        ProjectModule,
         VideosModule,
         SharedModule,
     ],

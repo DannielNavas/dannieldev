@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CustomRoutes } from '@shared/utils/custom.routes';
 import { ArticleComponent } from './article/article.component';
 import { BlogComponent } from './blog.component';
 
@@ -9,13 +10,13 @@ const routes: Routes = [
         component: BlogComponent
     },
     {
-        path: 'article/:id',
+        path: `${CustomRoutes.articles}/:id`,
         component: ArticleComponent
     }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class BlogRoutingModule { }

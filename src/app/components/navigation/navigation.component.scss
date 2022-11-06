@@ -30,7 +30,7 @@
 .navigation {
     &__bar {
         background-color: transparent;
-        color: #fff;
+        color: $font-color-banner;
     }
 }
 
@@ -53,7 +53,7 @@ a {
 
 .wrapper {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1160px;
     height: auto;
     display: flex;
     flex-flow: row wrap;
@@ -66,4 +66,16 @@ a {
     color: $font-color-banner !important;
     font-weight: bold;
     text-decoration: underline !important;
+}
+
+menu {
+    margin: 0;
+
+    @include for-phone-only {
+        display: none;
+    }
+
+    @include for-tablet-portrait-up {
+        display: none;
+    }
 }
