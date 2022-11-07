@@ -1,0 +1,32 @@
+.container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: .6rem;
+}
+
+.image {
+    height: 80px;
+    width: 80px;
+}
+
+.information {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-flow: column wrap;
+
+    &__certificate {
+        margin: 0;
+    }
+
+    &__date {
+        margin: 0;
+    }
+
+    &__school {
+        margin: 0;
+    }
+}
