@@ -22,7 +22,7 @@ section {
         gap: 1rem;
 
         @include for-desktop-up {
-            max-width: 1000px;
+            max-width: 1160px;
         }
     }
 
@@ -48,7 +48,7 @@ section {
     gap: .5rem;
 
     @include for-desktop-up {
-        max-width: 1000px;
+        max-width: 1160px;
         justify-content: space-between;
     }
 }

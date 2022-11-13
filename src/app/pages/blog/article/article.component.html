@@ -1,0 +1,17 @@
+<nav>
+    <app-navigation color="#00bcd4"></app-navigation>
+</nav>
+<article class="principal">
+    <div class="principal__row">
+        <div class="article">
+            <h1>{{article.title}}</h1>
+            <div class="article__content" [innerHTML]="article.body_html"></div>
+        </div>
+        <div class="information">
+            <app-aboutme [userData]="user"></app-aboutme>
+            <app-detailsarticle [comments]="article.comments_count" [datePublish]="article.published_at"
+                [reactions]="article.public_reactions_count" [tags]="article.tags"
+                [readingTimeMinutes]="article.reading_time_minutes"></app-detailsarticle>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,121 @@
+[
+  {
+    "certificate": "Ingeniero de sistemas",
+    "date": "2020",
+    "school": "Fundación universitaria panamericana",
+    "professional": true,
+    "image": "https://ucompensar.edu.co/wp-content/uploads/2022/02/logo-ucompensar-2022.jpg"
+  },
+  {
+    "certificate": "Tecnologo en análisis y desarrollo de sistemas de información",
+    "date": "2014",
+    "school": "SENA",
+    "professional": true,
+    "image": "https://www.sena-virtual.co/wp-content/uploads/2021/01/sena-virtual-certificados-.jpg"
+  },
+  {
+    "certificate": "Tecnico en sistemas y computación",
+    "date": "2011",
+    "school": "ITFIP",
+    "professional": true,
+    "image": "https://www.redttu.edu.co/es/wp-content/uploads/2016/01/itfip.png"
+  },
+  {
+    "certificate": "Scrum Fundamentals Certified",
+    "date": "2015",
+    "school": "SCRUMstudy",
+    "professional": false,
+    "image": "https://www.egresadosudistrital.edu.co/virtualcourses/wp-content/uploads/2020/05/ScrumStudy-vs-certiProf.jpg"
+  },
+  {
+    "certificate": "Curso de TypeScript con Angular por Belatrix",
+    "date": "2020",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Angular 6 2018",
+    "date": "2020",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Angular",
+    "date": "2020",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso Profesional de Angular",
+    "date": "2020",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Progressive Web Apps con Angular",
+    "date": "2020",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Rendimiento en Angular",
+    "date": "2021",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Fundamentos de Angular",
+    "date": "2022",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de ECMAScript 6+",
+    "date": "2022",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Consumo de APIs REST con Angular",
+    "date": "2022",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Angular: Componentes y Servicios",
+    "date": "2022",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Angular Router: Lazy Loading y Programación Modular",
+    "date": "2022",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso de Angular Forms: Creación y Optimización de Formularios Web",
+    "date": "2022",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  },
+  {
+    "certificate": "Curso Básico de JavaScript",
+    "date": "2022",
+    "school": "Platzi",
+    "professional": false,
+    "image": "https://adventjs.dev/platzi.jpg"
+  }
+]

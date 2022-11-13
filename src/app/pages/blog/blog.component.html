@@ -1,0 +1,14 @@
+<nav>
+    <app-navigation color="#00bcd4"></app-navigation>
+</nav>
+<section>
+    <div class="principal__row">
+        <h2>Publicaciones</h2>
+        <div class="principal__line"></div>
+        <section class="order">
+            <div *ngFor="let post of posts">
+                <app-article [posts]="post"></app-article>
+            </div>
+        </section>
+    </div>
+</section>

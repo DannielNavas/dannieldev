@@ -16,11 +16,11 @@ export const environment = {
     measurementId: 'G-HDQFTS9M45',
   },
   youtube_endpoint: 'https://youtube.googleapis.com/youtube/v3/search',
-  youtube_key: 'AIzaSyApbPkFH7_wUdmsJ_17vF6iqw8A7OB04ig',
+    youtube_key: 'AIzaSyAcFEiRtFoJqhcQWpnF3Vsyg7pLa09_fl0',
   youtube_channel: 'UC-WOFSnewqJ1CRjFuZYaYEQ',
   youtube_part: 'snippet',
   devto: 'https://dev.to/api/articles?username=dannieldev',
-  statistics: 'http://localhost:3000/statistic',
+statistics: 'https://backend-danniel-dev.vercel.app/statistic',
 };
 
 /*

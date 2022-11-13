@@ -1,0 +1,10 @@
+<div class="container" *ngIf="certificate">
+    <div class="image">
+        <img [src]="certificate.image" [alt]="certificate.school" width="100%">
+    </div>
+    <div class="information">
+        <h1 class="information__certificate">{{certificate.certificate}}</h1>
+        <span class="information__date">{{certificate.date}}</span>
+        <p class="information__school">{{certificate.school}}</p>
+    </div>
+</div>

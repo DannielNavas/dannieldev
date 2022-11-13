@@ -1,0 +1,14 @@
+<nav>
+    <app-navigation color="#00bcd4"></app-navigation>
+</nav>
+<section class="principal">
+    <div class="principal__row">
+        <h2>Proyectos</h2>
+        <div class="principal__line"></div>
+        <section class="order">
+            <div *ngFor="let project of projects|randomlist ">
+                <app-projects [project]="project"></app-projects>
+            </div>
+        </section>
+    </div>
+</section>

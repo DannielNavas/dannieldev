@@ -45,7 +45,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: auto;
+        width: 100%;
+        max-width: 687px;
 
         p {
             margin: 0;
@@ -74,4 +75,9 @@ button {
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

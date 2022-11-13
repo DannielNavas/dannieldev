@@ -1,0 +1,14 @@
+@import './../../shared/utils/variables.scss';
+
+.container {
+    background-color: #222323;
+    color: #c7cdcd;
+    padding: 24px;
+    margin-top: 32px;
+    border-radius: 8px;
+
+    &__image {
+        height: 100px;
+        border-radius: 9999px;
+    }
+}

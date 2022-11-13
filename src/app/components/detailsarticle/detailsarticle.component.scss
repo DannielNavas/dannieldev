@@ -1,0 +1,50 @@
+@import './../../shared/utils/variables.scss';
+
+.container {
+    background-color: #222323;
+    color: #c7cdcd;
+    padding: 24px;
+    margin-top: 32px;
+    border-radius: 8px;
+
+    &__image {
+        height: 100px;
+        border-radius: 9999px;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.tag {
+    height: 22px;
+    width: auto;
+    text-align: center;
+    background-color: #4b4c4c;
+    padding: 3px;
+    border: 1px solid #f5f7f7;
+    border-radius: 6px;
+
+    &__text {
+        margin: auto;
+        color: #f5f7f7;
+    }
+}
+
+.interections {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    width: 100%;
+    gap: 2.5em;
+
+    &__text {
+        height: auto;
+        margin: 0;
+    }
+}
