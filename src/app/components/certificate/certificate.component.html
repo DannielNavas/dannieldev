@@ -1,6 +1,6 @@
 <div class="container" *ngIf="certificate">
     <div class="image">
-        <img [src]="certificate.image" [alt]="certificate.school" width="100%">
+        <img [src]="certificate.image" [alt]="certificate.school" loading="lazy" width="100%">
     </div>
     <div class="information">
         <h1 class="information__certificate">{{certificate.certificate}}</h1>
