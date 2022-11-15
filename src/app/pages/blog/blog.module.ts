@@ -9,7 +9,6 @@ import { NavigationModule } from '@components/navigation/navigation.module';
 import { AboutmeModule } from '@components/aboutme/aboutme.module';
 import { DetailsarticleModule } from '@components/detailsarticle/detailsarticle.module';
 
-
 @NgModule({
     declarations: [
         BlogComponent,
@@ -21,7 +20,7 @@ import { DetailsarticleModule } from '@components/detailsarticle/detailsarticle.
         ArticleModule,
         NavigationModule,
         AboutmeModule,
-        DetailsarticleModule
+        DetailsarticleModule,
     ]
 })
 export class BlogModule { }

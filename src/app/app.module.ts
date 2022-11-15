@@ -1,6 +1,6 @@
 import { APP_INITIALIZER, ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { FooterModule } from '@components/footer/footer.module';
 import { HeaderModule } from '@components/header/header.module';
@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { Router } from '@angular/router';
 import * as Sentry from '@sentry/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoaderInterceptor } from '@core/interceptors/loader.interceptor';
+import { LoaderModule } from '@components/loader/loader.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -20,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         HeaderModule,
         FooterModule,
         HttpClientModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        LoaderModule
     ],
     providers: [
         {
@@ -37,6 +40,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
             provide: APP_INITIALIZER,
             useFactory: () => () => { },
             deps: [Sentry.TraceService],
+            multi: true,
+        },
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: LoaderInterceptor,
             multi: true,
         },
     ],
