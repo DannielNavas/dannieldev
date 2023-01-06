@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { IPost } from '@core/models/devto/response-devto';
 import { IResponseGithub } from '@core/models/github/response-github';
-import { IResponseStatistics } from '@core/models/statistic/response-statistec';
-import { RequestYoutube } from '@core/models/youtube/request-youtube';
 import { Item, ResponseYoutube } from '@core/models/youtube/response-youtube';
 import { DevtoService } from '@core/services/devto/devto.service';
 import { GithubService } from '@core/services/github/github.service';
@@ -22,8 +21,13 @@ export class PrincipalComponent implements OnInit {
   constructor(
     private youtubeService: YoutubeService,
     private devtoService: DevtoService,
-    private githubService: GithubService
-  ) {}
+    private githubService: GithubService,
+    private title: Title
+  ) {
+    this.title.setTitle(
+      'Bienvenidos a mi sitio web: Danniel Navas, desarrollador de software'
+    );
+  }
   ngOnInit(): void {
     this.getDataYoutube();
     this.getPostsDevto();
